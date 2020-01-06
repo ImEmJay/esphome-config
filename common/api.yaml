@@ -1,0 +1,2 @@
+api:
+  password: ${api_password}
