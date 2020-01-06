@@ -1,0 +1,82 @@
+# Sonoff S20 Plug
+
+substitutions:
+  device_id: !secret esp_sonoff_s20_01_device_id
+  device_name: !secret esp_sonoff_s20_01_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  button_pin: GPIO00 # Power Button
+  status_led_pin: GPIO13 # Green LED
+  relay_pin: GPIO12 # Relay
+
+
+esphome:
+  name: ${device_id}
+  platform: ESP8266
+  board: esp01_1m
+  esp8266_restore_from_flash: True
+
+api:
+  password: ${api_password}
+
+ota:
+  password: ${ota_password}
+
+time:
+  platform: homeassistant
+  id: homeassistant_time
+
+web_server:
+  port: 80
+
+wifi:
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}
+  ap:
+    ssid: "${device_name} AP"
+    password: ${wifi_password}
+
+captive_portal:
+logger:
+
+
+binary_sensor:
+  - platform: gpio
+    id: power_button
+    pin:
+      number: ${button_pin}
+      mode: INPUT_PULLUP
+    on_press:
+      - switch.toggle: relay
+    filters:
+      - delayed_on: 10ms
+
+  - platform: status
+    name: "${device_name} Status"
+
+sensor:
+  - platform: uptime
+    name: "${device_name} Uptime"
+
+  - platform: wifi_signal
+    name: "${device_name} Wifi Signal"
+    update_interval: 60s
+
+status_led:
+  pin:
+    number: ${status_led_pin}
+    inverted: True
+
+switch:
+  - platform: gpio
+    name: "${device_name}"
+    id: relay
+    pin: $relay_pin
+    restore_mode: RESTORE_DEFAULT_OFF
+
+  - platform: restart
+    name: "${device_name} Restart"
