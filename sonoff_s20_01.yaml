@@ -13,70 +13,28 @@ substitutions:
   status_led_pin: GPIO13 # Green LED
   relay_pin: GPIO12 # Relay
 
-
 esphome:
   name: ${device_id}
-  platform: ESP8266
-  board: esp01_1m
-  esp8266_restore_from_flash: True
 
-api:
-  password: ${api_password}
+  <<: !include common/board/esp8266.yaml
 
-ota:
-  password: ${ota_password}
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/status_led.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
 
-time:
-  platform: homeassistant
-  id: homeassistant_time
-
-web_server:
-  port: 80
-
-wifi:
-  ssid: ${wifi_ssid}
-  password: ${wifi_password}
-  ap:
-    ssid: "${device_name} AP"
-    password: ${wifi_password}
-
-captive_portal:
 logger:
 
-
 binary_sensor:
-  - platform: gpio
-    id: power_button
-    pin:
-      number: ${button_pin}
-      mode: INPUT_PULLUP
-    on_press:
-      - switch.toggle: relay
-    filters:
-      - delayed_on: 10ms
-
-  - platform: status
-    name: "${device_name} Status"
+  - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/power_button.yaml
 
 sensor:
-  - platform: uptime
-    name: "${device_name} Uptime"
-
-  - platform: wifi_signal
-    name: "${device_name} Wifi Signal"
-    update_interval: 60s
-
-status_led:
-  pin:
-    number: ${status_led_pin}
-    inverted: True
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
 
 switch:
-  - platform: gpio
-    name: "${device_name}"
-    id: relay
-    pin: $relay_pin
-    restore_mode: RESTORE_DEFAULT_OFF
-
-  - platform: restart
-    name: "${device_name} Restart"
+  - !include common/switch/relay.yaml
+  - !include common/switch/restart.yaml
