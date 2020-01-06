@@ -1,0 +1,9 @@
+platform: gpio
+id: power_button
+pin:
+  number: ${button_pin}
+  mode: INPUT_PULLUP
+on_press:
+  - switch.toggle: relay
+filters:
+  - delayed_on: 10ms
