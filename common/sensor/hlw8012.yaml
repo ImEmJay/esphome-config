@@ -1,0 +1,19 @@
+platform: hlw8012
+sel_pin:
+  number: ${power_sel_pin}
+  inverted: True
+cf_pin: ${power_cf_pin}
+cf1_pin: ${power_cf1_pin}
+current:
+  name: "${device_name} Current"
+power:
+  name: "${device_name} Power"
+  id: power_monitor_value
+  filters:
+    - lambda: return (x / 2.2);
+voltage:
+  name: "${device_name} Voltage"
+current_resistor: ${current_resistor} # default 0.001
+voltage_divider: ${voltage_divider} # default 2351
+change_mode_every: 3 # default 8
+update_interval: 10s # default 60s

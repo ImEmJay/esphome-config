@@ -1,2 +1,4 @@
 **/
 /secrets.yaml
+!common/
+!common/**

@@ -1,0 +1,4 @@
+status_led:
+  pin:
+    number: ${status_led_pin}
+    inverted: True
