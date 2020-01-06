@@ -1,4 +1,5 @@
 # Gosund SP111 Power Monitoring Plug
+
 substitutions:
   device_id: !secret esp_gosund_sp111_01_device_id
   device_name: !secret esp_gosund_sp111_01_device_name
@@ -18,97 +19,33 @@ substitutions:
   current_resistor: '0.001' # Powermeter Current Resistor
   voltage_divider: '910' # Powermeter Voltage Devider
 
-
 esphome:
   name: ${device_id}
-  platform: ESP8266
-  board: esp01_1m
-  esp8266_restore_from_flash: True
 
-api:
-  password: ${api_password}
+  <<: !include common/board/esp8266.yaml
 
-ota:
-  password: ${ota_password}
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/status_led.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
 
-time:
-  platform: homeassistant
-  id: homeassistant_time
-
-web_server:
-  port: 80
-
-wifi:
-  ssid: ${wifi_ssid}
-  password: ${wifi_password}
-  ap:
-    ssid: "${device_name} AP"
-    password: ${wifi_password}
-
-captive_portal:
 logger:
 
-
 binary_sensor:
-  - platform: gpio
-    id: power_button
-    pin:
-      number: ${button_pin}
-      mode: INPUT_PULLUP
-    on_press:
-      - switch.toggle: relay
-    filters:
-      - delayed_on: 10ms
-
-  - platform: status
-    name: "${device_name} Status"
+  - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/power_button.yaml
 
 sensor:
-  - platform: hlw8012
-    sel_pin:
-      number: ${power_sel_pin}
-      inverted: True
-    cf_pin: ${power_cf_pin}
-    cf1_pin: ${power_cf1_pin}
-    current:
-      name: "${device_name} Current"
-    power:
-      name: "${device_name} Power"
-      id: power_monitor_value
-      filters:
-        - lambda: return (x / 2.2);
-    voltage:
-      name: "${device_name} Voltage"
-    current_resistor: ${current_resistor} # default 0.001
-    voltage_divider: ${voltage_divider} # default 2351
-    change_mode_every: 3 # default 8
-    update_interval: 10s # default 60s
-
-  - platform: total_daily_energy
-    name: "${device_name} Total Daily Energy"
-    power_id: power_monitor_value
-    unit_of_measurement: kW
-    filters:
-      - multiply: 0.001
-
-  - platform: uptime
-    name: "${device_name} Uptime"
-
-  - platform: wifi_signal
-    name: "${device_name} Wifi Signal"
-    update_interval: 60s
-
-status_led:
-  pin:
-    number: ${status_led_pin}
-    inverted: True
+  - !include common/sensor/hlw8012.yaml
+  - !include common/sensor/total_daily_energy.yaml
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
 
 switch:
-  - platform: gpio
-    name:   ${device_name}
-    id: relay
-    pin: $relay_pin
-    restore_mode: RESTORE_DEFAULT_OFF
+  - !include common/switch/relay.yaml
+  - !include common/switch/restart.yaml
 
-  - platform: restart
-    name: ${device_name} Restart
+
+
