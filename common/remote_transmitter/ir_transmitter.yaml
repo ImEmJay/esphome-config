@@ -1,0 +1,3 @@
+id: ir_transmitter
+pin: $ir_transmitter_pin
+carrier_duty_percent: 50%
