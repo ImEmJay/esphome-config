@@ -1,0 +1,6 @@
+platform: template
+name: "light_id"
+id: light_id
+update_interval: 24h
+lambda: |-
+  return {"esphome_diyhue_light;mac_address;light_name;ct_boost;rgb_boost"};
