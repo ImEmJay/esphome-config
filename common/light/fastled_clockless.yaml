@@ -1,0 +1,12 @@
+platform: fastled_clockless
+name: "color_led"
+id: color_led
+chipset: ${chipset}
+pin: ${data_pin}
+num_leds: ${num_leds}
+rgb_order: ${rgb_order}
+color_correct: [$color_correct_r, $color_correct_g, $color_correct_b]
+default_transition_length: ${default_transition_length}
+gamma_correct: ${gamma_correct}
+restore_mode: ${restore_mode}
+<<: !include effects_adressable.yaml

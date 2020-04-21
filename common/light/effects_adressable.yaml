@@ -1,0 +1,10 @@
+effects:
+  - addressable_color_wipe:
+  - addressable_fireworks:
+  - addressable_flicker:
+  - addressable_rainbow:
+  - addressable_random_twinkle:
+  - addressable_scan:
+  - strobe:
+  - addressable_twinkle:
+  - random:

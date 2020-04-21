@@ -1,0 +1,53 @@
+# DIY Hue Light (adressable)
+
+substitutions:
+  device_id: !secret esp_diy_hue_01_device_id
+  device_name: !secret esp_diy_hue_01_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  data_pin: GPIO00
+  status_led_pin: GPIO02 # Blue LED
+
+  chipset: WS2811
+  color_correct_r: 100%
+  color_correct_g: 100%
+  color_correct_b: 100%
+  default_transition_length: 1s # Default 1s
+  gamma_correct: '2.8' # Default 2.8
+  num_leds: '60'
+  restore_mode: RESTORE_DEFAULT_OFF
+  rgb_order: GRB
+
+esphome:
+  name: ${device_id}
+
+  <<: !include common/board/esp8266.yaml
+
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/status_led.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
+
+logger:
+
+binary_sensor:
+  - !include common/binary_sensor/device_status.yaml
+
+light:
+  - !include common/light/fastled_clockless.yaml
+
+sensor:
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
+
+text_sensor:
+  - !include common/text_sensor/light_id.yaml
+
+switch:
+  - !include common/switch/restart.yaml
