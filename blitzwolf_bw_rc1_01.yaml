@@ -44,3 +44,244 @@ sensor:
 
 switch:
   - !include common/switch/restart.yaml
+  - platform: template
+    name: "Samsung Remote Blue"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E06897
+  - platform: template
+    name: "Samsung Remote Channel 0"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E08877
+  - platform: template
+    name: "Samsung Remote Channel 1"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E020DF
+  - platform: template
+    name: "Samsung Remote Channel 2"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0A05F
+  - platform: template
+    name: "Samsung Remote Channel 3"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0609F
+  - platform: template
+    name: "Samsung Remote Channel 4"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E010EF
+  - platform: template
+    name: "Samsung Remote Channel 5"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0906F
+  - platform: template
+    name: "Samsung Remote Channel 6"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E050AF
+  - platform: template
+    name: "Samsung Remote Channel 7"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E030CF
+  - platform: template
+    name: "Samsung Remote Channel 8"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0B04F
+  - platform: template
+    name: "Samsung Remote Channel 9"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0708F
+  - platform: template
+    name: "Samsung Remote Channel Down"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E008F7
+  - platform: template
+    name: "Samsung Remote Channel List"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0D629
+  - platform: template
+    name: "Samsung Remote Channel Mode"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0C43B
+  - platform: template
+    name: "Samsung Remote Channel Up"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E048B7
+  - platform: template
+    name: "Samsung Remote DMA"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0C639
+  - platform: template
+    name: "Samsung Remote Down"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E08679
+  - platform: template
+    name: "Samsung Remote Enter"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E016E9
+  - platform: template
+    name: "Samsung Remote Entertainment Mode"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E029D6
+  - platform: template
+    name: "Samsung Remote Exit"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0B44B
+  - platform: template
+    name: "Samsung Remote Foreward"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E012ED
+  - platform: template
+    name: "Samsung Remote Green"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E028D7
+  - platform: template
+    name: "Samsung Remote Guide"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0F20D
+  - platform: template
+    name: "Samsung Remote HDMI"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0D12E
+  - platform: template
+    name: "Samsung Remote Menu"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E058A7
+  - platform: template
+    name: "Samsung Remote Mute"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0F00F
+  - platform: template
+    name: "Samsung Remote Info"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0F807
+  - platform: template
+    name: "Samsung Remote Left"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0A659
+  - platform: template
+    name: "Samsung Remote Pause"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E052AD
+  - platform: template
+    name: "Samsung Remote Picture Size"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E07C83
+  - platform: template
+    name: "Samsung Remote Play"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0E21D
+  - platform: template
+    name: "Samsung Remote Previous Channel"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0C837
+  - platform: template
+    name: "Samsung Remote Record"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0926D
+  - platform: template
+    name: "Samsung Remote Red"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E036C9
+  - platform: template
+    name: "Samsung Remote Return"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E01AE5
+  - platform: template
+    name: "Samsung Remote Rewind"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0A25D
+  - platform: template
+    name: "Samsung Remote Right"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E046B9
+  - platform: template
+    name: "Samsung Remote Source"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0807F
+  - platform: template
+    name: "Samsung Remote Stop"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0629D
+  - platform: template
+    name: "Samsung Remote Subtitle"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0A45B
+  - platform: template
+    name: "Samsung Remote TV Mode"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0C23D
+  - platform: template
+    name: "Samsung Remote TV Power"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E040BF
+  - platform: template
+    name: "Samsung Remote Text"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E034CB
+  - platform: template
+    name: "Samsung Remote Tools"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0D22D
+  - platform: template
+    name: "Samsung Remote Up"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E006F9
+  - platform: template
+    name: "Samsung Remote Volume Down"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0D02F
+  - platform: template
+    name: "Samsung Remote Volume Up"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0E01F
+  - platform: template
+    name: "Samsung Remote Yellow"
+    turn_on_action:
+      remote_transmitter.transmit_samsung:
+        data: 0xE0E0A857
+
