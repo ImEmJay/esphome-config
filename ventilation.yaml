@@ -8,6 +8,7 @@ substitutions:
 
   api_password: !secret esp_api_password
   ota_password: !secret esp_ota_password
+  wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
   wifi_password: !secret wifi_password
 
@@ -23,8 +24,9 @@ substitutions:
 
 esphome:
   name: ${device_id}
-
-  <<: !include common/board/esp8266.yaml
+  platform: ESP8266
+  board: esp8285
+  arduino_version: 2.4.2
 
 <<: !include common/api.yaml
 <<: !include common/ota.yaml
