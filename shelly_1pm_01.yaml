@@ -1,0 +1,49 @@
+# Shelly 1 PM Power Monitoring Relay
+
+substitutions:
+  device_id: !secret esp_shelly_1pm_01_device_id
+  device_name: !secret esp_shelly_1pm_01_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_domain: !secret wifi_domain
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  button_pin: GPIO04 # Power Button
+  power_cf_pin: GPIO05 # Powermeter
+  power_cf1_pin: GPIO13 # Powermeter
+  power_sel_pin: GPIO14 # Powermeter
+  relay_pin: GPIO15 # Relay
+  status_led_pin: GPIO00 # Red LED
+
+  current_resistor: '0.001' # Powermeter Current Resistor
+  voltage_divider: '910' # Powermeter Voltage Devider
+
+esphome:
+  name: ${device_id}
+
+  <<: !include common/board/esp8266.yaml
+
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/status_led.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
+
+logger:
+
+binary_sensor:
+  - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/power_button.yaml
+
+sensor:
+  - !include common/sensor/hlw8012.yaml
+  - !include common/sensor/total_daily_energy.yaml
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
+
+switch:
+  - !include common/switch/relay.yaml
+  - !include common/switch/restart.yaml
