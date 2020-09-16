@@ -1,0 +1,3 @@
+platform: gpio
+pin: $relay_pin
+id: relay
