@@ -1,0 +1,3 @@
+[submodule "includes/ayufan-esphome-components"]
+	path = includes/ayufan-esphome-components
+	url = https://github.com/ayufan/esphome-components.git
