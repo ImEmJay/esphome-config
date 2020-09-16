@@ -1,7 +1,7 @@
 platform: gpio
 id: input
 pin:
-  number: $input_pin
+  number: ${input_pin}
 on_state:
   then:
-    - light.toggle: $light_switch_light
+    - light.toggle: binary_light
