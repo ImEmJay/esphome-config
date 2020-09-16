@@ -1,0 +1,46 @@
+# Shelly 1 Relay Light
+
+substitutions:
+  device_id: !secret esp_shelly_1_light_01_device_id
+  device_name: !secret esp_shelly_1_light_01_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_domain: !secret wifi_domain
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  input_pin: GPIO05 # Switch
+  relay_pin: GPIO04 # Relay
+
+  binary_light_output: relay
+
+esphome:
+  name: ${device_id}
+
+  <<: !include common/board/esp8266.yaml
+
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
+
+logger:
+
+binary_sensor:
+  - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/light_switch.yaml
+
+light:
+  - !include common/light/binary_light.yaml
+
+output:
+  - !include common/output/relay.yaml
+
+sensor:
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
+
+switch:
+  - !include common/switch/restart.yaml
