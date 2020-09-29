@@ -1,9 +1,2 @@
-/.esphome/
-/.vscode/
-**/.pioenvs/
-**/.piolibdeps/
-**/lib/
-**/src/
-**/platformio.ini
-/.history
+**/
 /secrets.yaml
