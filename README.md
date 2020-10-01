@@ -23,13 +23,15 @@ The following features are implemented for every device
 | Device  | Type  | Description |
 | -- |  --  | --  |
 | [gosund_sp111]  | [Gosund SP111]  | Power Monitoring Plug |
-| [sonoff_s20]    | [Sonoff S20]    | Power Plug |
+| [koogeek_kloe4] | [Koogeek KLOE4] | Power Strip           |
+| [sonoff_s20]    | [Sonoff S20]    | Power Plug            |
 
 ## Device specific firmware features
 
 | Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay]
 | --  |  :--: |  :--:  | :--:  |  :--: |
 | [gosund_sp111]  | [ESP8266] | x  | x |  x |
+| [koogeek_kloe4] | [ESP8266] | x  | x |  x |
 | [sonoff_s20]    | [ESP8266] | x  | x |  x |
 
 ## Device specific sensors
@@ -43,6 +45,7 @@ The following features are implemented for every device
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
 [Home Assistant]: https://www.home-assistant.io/
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
+[Koogeek KLOE4]: https://www.koogeek.com/p-kloe4.html
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
 [Board]: https://esphome.io/components/status_led.html
@@ -63,6 +66,7 @@ The following features are implemented for every device
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
+[koogeek_kloe4]: ttps://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
 [total_daily_energy]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/total_daily_energy.yaml
