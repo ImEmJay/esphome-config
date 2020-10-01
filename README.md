@@ -41,7 +41,6 @@ The following features are implemented for every device
 | Device  | [HLW8012] | Features
 | --  |  :--: | --  |
 | [gosund_sp111]  | x | current, power, voltage, [total_daily_energy] |
-| [sonoff_s20]    | - ||                                               |
 
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
@@ -69,7 +68,7 @@ The following features are implemented for every device
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
-[koogeek_kloe4]: ttps://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
+[koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
 [sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yml
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
