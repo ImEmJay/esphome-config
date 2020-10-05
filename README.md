@@ -28,6 +28,7 @@ The following features are implemented for every device
 | [koogeek_kloe4]     | [Koogeek KLOE4]     | Power Strip               |
 | [sonoff_basic]      | [Sonoff Basic]      | Relay                     |
 | [sonoff_s20]        | [Sonoff S20]        | Power Plug                |
+| [ventilation]       | [Sonoff TH10]       | Humidity controlled Relay |
 
 ## Device specific firmware features
 
@@ -39,13 +40,15 @@ The following features are implemented for every device
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x | -         | - |
 | [sonoff_basic]      | [ESP8266] | x  | x |  x | -         | - |
 | [sonoff_s20]        | [ESP8266] | x  | x |  x | -         | - |
+| [ventilation]       | [ESP8266] | x  | x |  x | -         | - |
 
 ## Device specific sensors
 
-| Device  | [HLW8012]  | [Remote Receiver] | Features
-| --  |  :--: |  :--: | --  |
-| [blitzwolf_bw_rc1]  | - | x | [ir_transmitter] |
-| [gosund_sp111]      | x | - | current, power, voltage, [total_daily_energy] |
+| Device  | [HLW8012]  | [Remote Receiver] |  [DHT] | Features
+| --  |  :--: |  :--: |  :--: | --  |
+| [blitzwolf_bw_rc1]  | - | x | - | [ir_transmitter] |
+| [gosund_sp111]      | x | - | - | current, power, voltage, [total_daily_energy] |
+| [ventilation]       | - | - | SI7021 | temperature, humidity |
 
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
@@ -56,9 +59,11 @@ The following features are implemented for every device
 [Koogeek KLOE4]: https://www.koogeek.com/p-kloe4.html
 [Sonoff Basic]: https://sonoff.tech/product/wifi-diy-smart-switches/basicr2
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
+[Sonoff TH10]: https://sonoff.tech/product/wifi-diy-smart-switches/th10-th16
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
 [Board]: https://esphome.io/components/status_led.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
+[DHT]: https://esphome.io/components/sensor/dht.html
 [ESP8266]: https://esphome.io/devices/esp8266.html
 [FastLED]: https://esphome.io/components/light/fastled.html
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
@@ -89,3 +94,4 @@ The following features are implemented for every device
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
 [total_daily_energy]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/total_daily_energy.yaml
+[ventilation]: https://github.com/ImEmJay/esphome-config/blob/master/ventilation.yml
