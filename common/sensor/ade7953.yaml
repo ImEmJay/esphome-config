@@ -1,0 +1,18 @@
+platform: ade7953
+voltage:
+  name: "${device_name} Voltage"
+current_a:
+  name: "${device_name} Current 1"
+current_b:
+  name: "${device_name} Current 2"
+active_power_a:
+  name: "${device_name} Power 1"
+  id: power_monitor_value_1
+  filters:
+    - multiply: -1
+active_power_b:
+  name: "${device_name} Power 2"
+  id: power_monitor_value_2
+  filters:
+    - multiply: -1
+update_interval: 10s # default 60s

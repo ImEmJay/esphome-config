@@ -1,0 +1,5 @@
+platform: resistance
+id: temperature_resistance
+sensor: temperature_analog
+configuration: DOWNSTREAM
+resistor: ${temperature_resistance_resistor}
