@@ -26,6 +26,7 @@ The following features are implemented for every device
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light  |
 | [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug     |
 | [koogeek_kloe4]     | [Koogeek KLOE4]           | Power Strip               |
+| [shelly_1_light]    | [Shelly 1]                | Relay based light         |
 | [shelly_1pm]        | [Shelly 1PM]              | Power Monitoring Relay    |
 | [sonoff_basic]      | [Sonoff Basic]            | Relay                     |
 | [sonoff_s20]        | [Sonoff S20]              | Power Plug                |
@@ -40,6 +41,7 @@ The following features are implemented for every device
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
+| [shelly_1_light]    | [ESP8266] | -  | - |  x |  - | [Binary]        | - |
 | [shelly_1pm]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [sonoff_basic]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [sonoff_s20]        | [ESP8266] | x  | x |  x |  - | -               | - |
@@ -48,12 +50,13 @@ The following features are implemented for every device
 
 ## Device specific sensors
 
-| Device  | [HLW8012]  | [Remote Receiver] |  [DHT] | Features
-| --  |  :--: |  :--: |  :--: | --  |
-| [blitzwolf_bw_rc1]  | - | x | - | [ir_transmitter] |
-| [shelly_1pm]        | x | - | - | current, power, [total_daily_energy] |
-| [gosund_sp111]      | x | - | - | current, power, voltage, [total_daily_energy] |
-| [ventilation]       | - | - | SI7021 | temperature, humidity |
+| Device  | [HLW8012]  | [Remote Receiver] | [GPIO] |  [DHT] | Features
+| --  |  :--: |  :--: |  :--: |  :--: | --  |
+| [blitzwolf_bw_rc1]  | - | x | - | - | [ir_transmitter] |
+| [shelly_1_light]    | - | - | x | - | [light_switch]    |
+| [shelly_1pm]        | x | - | - | - | current, power, [total_daily_energy] |
+| [gosund_sp111]      | x | - | - | - | current, power, voltage, [total_daily_energy] |
+| [ventilation]       | - | - | - | SI7021 | temperature, humidity |
 
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
@@ -62,17 +65,20 @@ The following features are implemented for every device
 [Blitzwolf BW-RC1]: https://www.blitzwolf.com/BlitzWolf%C2%A0BW-RC1-WiFi-Smart-IR-Controller-with-360%C2%B0-Transmission,-APP-Control,-Works-with-Alexa,-Automatic-Identification,-DIY-Pairing-and-Slim-Design-p-409.html
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
 [Koogeek KLOE4]: https://www.koogeek.com/p-kloe4.html
+[Shelly 1]: https://shelly.cloud/products/shelly-1-smart-home-automation-relay/
 [Shelly 1PM]: https://shelly.cloud/products/shelly-1pm-smart-home-automation-relay/
 [Sonoff Basic]: https://sonoff.tech/product/wifi-diy-smart-switches/basicr2
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
 [Sonoff TH10]: https://sonoff.tech/product/wifi-diy-smart-switches/th10-th16
 [Tuya QS-WiFi-D02-TRIAC]: https://expo.tuya.com/product/373634s
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
+[Binary]: https://esphome.io/components/light/binary.html
 [Board]: https://esphome.io/components/status_led.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
 [DHT]: https://esphome.io/components/sensor/dht.html
 [ESP8266]: https://esphome.io/devices/esp8266.html
 [FastLED]: https://esphome.io/components/light/fastled.html
+[GPIO]: https://esphome.io/components/binary_sensor/gpio.html
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
 [Light]: https://esphome.io/components/light.html
 [Native API]: https://esphome.io/components/api.html
@@ -99,6 +105,8 @@ The following features are implemented for every device
 [ir_receiver]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_receiver/ir_receiver.yaml
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
+[light_switch]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/light_switch.yaml
+[shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yml
 [shelly_1pm]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1pm_01.yml
 [sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yml
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
