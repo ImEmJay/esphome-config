@@ -1,0 +1,3 @@
+platform: adc
+id: temperature_analog
+pin: ${temperature_analog_pin}
