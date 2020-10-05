@@ -1,0 +1,10 @@
+platform: ntc
+sensor: temperature_resistance
+name: "${device_name} Temperature"
+unit_of_measurement: "°C"
+accuracy_decimals: 1
+icon: "mdi:thermometer"
+calibration:
+  b_constant: ${ntc_b_constant}
+  reference_resistance: ${ntc_reference_resistance}
+  reference_temperature: ${ntc_reference_temperature}
