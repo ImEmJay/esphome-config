@@ -26,6 +26,7 @@ The following features are implemented for every device
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light  |
 | [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug     |
 | [koogeek_kloe4]     | [Koogeek KLOE4]           | Power Strip               |
+| [shelly_1pm]        | [Shelly 1PM]              | Power Monitoring Relay    |
 | [sonoff_basic]      | [Sonoff Basic]            | Relay                     |
 | [sonoff_s20]        | [Sonoff S20]              | Power Plug                |
 | [tuya_qs_d02]       | [Tuya QS-WiFi-D02-TRIAC]  | 2 Channel Dimmer          |
@@ -39,6 +40,7 @@ The following features are implemented for every device
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
+| [shelly_1pm]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [sonoff_basic]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [sonoff_s20]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [tuya_qs_d02]       | [ESP8266] | -  | - |  - |  x | [Monochromatic] | - |
@@ -49,6 +51,7 @@ The following features are implemented for every device
 | Device  | [HLW8012]  | [Remote Receiver] |  [DHT] | Features
 | --  |  :--: |  :--: |  :--: | --  |
 | [blitzwolf_bw_rc1]  | - | x | - | [ir_transmitter] |
+| [shelly_1pm]        | x | - | - | current, power, [total_daily_energy] |
 | [gosund_sp111]      | x | - | - | current, power, voltage, [total_daily_energy] |
 | [ventilation]       | - | - | SI7021 | temperature, humidity |
 
@@ -59,6 +62,7 @@ The following features are implemented for every device
 [Blitzwolf BW-RC1]: https://www.blitzwolf.com/BlitzWolf%C2%A0BW-RC1-WiFi-Smart-IR-Controller-with-360%C2%B0-Transmission,-APP-Control,-Works-with-Alexa,-Automatic-Identification,-DIY-Pairing-and-Slim-Design-p-409.html
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
 [Koogeek KLOE4]: https://www.koogeek.com/p-kloe4.html
+[Shelly 1PM]: https://shelly.cloud/products/shelly-1pm-smart-home-automation-relay/
 [Sonoff Basic]: https://sonoff.tech/product/wifi-diy-smart-switches/basicr2
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
 [Sonoff TH10]: https://sonoff.tech/product/wifi-diy-smart-switches/th10-th16
@@ -95,6 +99,7 @@ The following features are implemented for every device
 [ir_receiver]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_receiver/ir_receiver.yaml
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
+[shelly_1pm]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1pm_01.yml
 [sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yml
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
