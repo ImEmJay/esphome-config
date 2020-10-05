@@ -22,25 +22,27 @@ The following features are implemented for every device
 
 | Device  | Type  | Description |
 | -- |  --  | --  |
-| [blitzwolf_bw_rc1]  | [Blitzwolf BW-RC1]  | IR Controller             |
-| [diy_hue]           | [DIY Hue]           | Hue compatible DIY light  |
-| [gosund_sp111]      | [Gosund SP111]      | Power Monitoring Plug     |
-| [koogeek_kloe4]     | [Koogeek KLOE4]     | Power Strip               |
-| [sonoff_basic]      | [Sonoff Basic]      | Relay                     |
-| [sonoff_s20]        | [Sonoff S20]        | Power Plug                |
-| [ventilation]       | [Sonoff TH10]       | Humidity controlled Relay |
+| [blitzwolf_bw_rc1]  | [Blitzwolf BW-RC1]        | IR Controller             |
+| [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light  |
+| [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug     |
+| [koogeek_kloe4]     | [Koogeek KLOE4]           | Power Strip               |
+| [sonoff_basic]      | [Sonoff Basic]            | Relay                     |
+| [sonoff_s20]        | [Sonoff S20]              | Power Plug                |
+| [tuya_qs_d02]       | [Tuya QS-WiFi-D02-TRIAC]  | 2 Channel Dimmer          |
+| [ventilation]       | [Sonoff TH10]             | Humidity controlled Relay |
 
 ## Device specific firmware features
 
-| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [Light] | [Remote Transmitter]
-| --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |
-| [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - | -         | [ir_receiver] |
-| [diy_hue]           | [ESP8266] | -  | x |  - | [FastLED] | - |
-| [gosund_sp111]      | [ESP8266] | x  | x |  x | -         | - |
-| [koogeek_kloe4]     | [ESP8266] | x  | x |  x | -         | - |
-| [sonoff_basic]      | [ESP8266] | x  | x |  x | -         | - |
-| [sonoff_s20]        | [ESP8266] | x  | x |  x | -         | - |
-| [ventilation]       | [ESP8266] | x  | x |  x | -         | - |
+| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
+| --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
+| [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
+| [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
+| [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
+| [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
+| [sonoff_basic]      | [ESP8266] | x  | x |  x |  - | -               | - |
+| [sonoff_s20]        | [ESP8266] | x  | x |  x |  - | -               | - |
+| [tuya_qs_d02]       | [ESP8266] | -  | - |  - |  x | [Monochromatic] | - |
+| [ventilation]       | [ESP8266] | x  | x |  x |  - | -               | - |
 
 ## Device specific sensors
 
@@ -60,6 +62,7 @@ The following features are implemented for every device
 [Sonoff Basic]: https://sonoff.tech/product/wifi-diy-smart-switches/basicr2
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
 [Sonoff TH10]: https://sonoff.tech/product/wifi-diy-smart-switches/th10-th16
+[Tuya QS-WiFi-D02-TRIAC]: https://expo.tuya.com/product/373634s
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
 [Board]: https://esphome.io/components/status_led.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
@@ -69,6 +72,7 @@ The following features are implemented for every device
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
 [Light]: https://esphome.io/components/light.html
 [Native API]: https://esphome.io/components/api.html
+[Monochromatic]: https://esphome.io/components/light/monochromatic.html
 [Over The Air]: https://esphome.io/components/ota.html
 [Physical Button]: https://esphome.io/components/binary_sensor/gpio.html
 [Platform]: https://esphome.io/components/status_led.html
@@ -79,6 +83,7 @@ The following features are implemented for every device
 [Status Binary Sensor]: https://esphome.io/components/binary_sensor/status.html
 [Status LED]: https://esphome.io/components/status_led.html
 [Time]: https://esphome.io/components/time.html
+[UART]: https://esphome.io/components/uart.html
 [Uptime Sensor]: https://esphome.io/components/sensor/uptime.html
 [Web Server]: https://esphome.io/components/web_server.html
 [Wifi]: https://esphome.io/components/wifi.html
@@ -94,4 +99,5 @@ The following features are implemented for every device
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
 [total_daily_energy]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/total_daily_energy.yaml
+[tuya_qs_d02]: https://github.com/ImEmJay/esphome-config/blob/master/tuya_qs_d02_01.yml
 [ventilation]: https://github.com/ImEmJay/esphome-config/blob/master/ventilation.yml
