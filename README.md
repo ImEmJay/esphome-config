@@ -22,26 +22,29 @@ The following features are implemented for every device
 
 | Device  | Type  | Description |
 | -- |  --  | --  |
-| [gosund_sp111]  | [Gosund SP111]  | Power Monitoring Plug |
-| [koogeek_kloe4] | [Koogeek KLOE4] | Power Strip           |
-| [sonoff_basic]  | [Sonoff Basic]  | Relay                 |
-| [sonoff_s20]    | [Sonoff S20]    | Power Plug            |
+| [diy_hue]       | [DIY Hue]       | Hue compatible DIY light  |
+| [gosund_sp111]  | [Gosund SP111]  | Power Monitoring Plug     |
+| [koogeek_kloe4] | [Koogeek KLOE4] | Power Strip               |
+| [sonoff_basic]  | [Sonoff Basic]  | Relay                     |
+| [sonoff_s20]    | [Sonoff S20]    | Power Plug                |
 
 ## Device specific firmware features
 
-| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay]
-| --  |  :--: |  :--:  | :--:  |  :--: |
-| [gosund_sp111]  | [ESP8266] | x  | x |  x |
-| [koogeek_kloe4] | [ESP8266] | x  | x |  x |
-| [sonoff_basic]  | [ESP8266] | x  | x |  x |
-| [sonoff_s20]    | [ESP8266] | x  | x |  x |
+| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [Light] |
+| --  |  :--: |  :--:  | :--:  |  :--: |  :--: |
+| [diy_hue]       | [ESP8266] | -  | x |  - | [FastLED] |
+| [gosund_sp111]  | [ESP8266] | x  | x |  x | - |
+| [koogeek_kloe4] | [ESP8266] | x  | x |  x | - |
+| [sonoff_basic]  | [ESP8266] | x  | x |  x | - |
+| [sonoff_s20]    | [ESP8266] | x  | x |  x | - |
 
 ## Device specific sensors
 
-| Device  | [HLW8012] | Features
+| Device  | [HLW8012]  | Features
 | --  |  :--: | --  |
 | [gosund_sp111]  | x | current, power, voltage, [total_daily_energy] |
 
+[DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
 [Home Assistant]: https://www.home-assistant.io/
@@ -53,7 +56,9 @@ The following features are implemented for every device
 [Board]: https://esphome.io/components/status_led.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
 [ESP8266]: https://esphome.io/devices/esp8266.html
+[FastLED]: https://esphome.io/components/light/fastled.html
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
+[Light]: https://esphome.io/components/light.html
 [Native API]: https://esphome.io/components/api.html
 [Over The Air]: https://esphome.io/components/ota.html
 [Physical Button]: https://esphome.io/components/binary_sensor/gpio.html
@@ -67,8 +72,10 @@ The following features are implemented for every device
 [Web Server]: https://esphome.io/components/web_server.html
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
+[diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
 [koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
+[light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
 [sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yml
 [sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
