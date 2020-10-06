@@ -1,0 +1,3 @@
+i2c:
+  sda: ${i2c_sda_pin}
+  scl: ${i2c_scl_pin}
