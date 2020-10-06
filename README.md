@@ -111,23 +111,23 @@ The following features are implemented for every device
 [Web Server]: https://esphome.io/components/web_server.html
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
-[blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yml
-[diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yml
-[gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
-[koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
+[blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
+[diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yaml
+[gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yaml
+[koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yaml
 [illuminance]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/illuminance.yaml
 [ir_receiver]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_receiver/ir_receiver.yaml
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
 [light_switch]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/light_switch.yaml
 [motion]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/motion.yaml
-[room_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/room_sensor_01.yml
-[shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yml
-[shelly_1pm]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1pm_01.yml
-[shelly_2_5_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_2_5_light_01.yml
-[sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yml
-[sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yml
-[gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
+[room_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/room_sensor_01.yaml
+[shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yaml
+[shelly_1pm]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1pm_01.yaml
+[shelly_2_5_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_2_5_light_01.yaml
+[sonoff_basic]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_basic_01.yaml
+[sonoff_s20]: https://github.com/ImEmJay/esphome-config/blob/master/sonoff_s20_01.yaml
+[gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yaml
 [total_daily_energy]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/total_daily_energy.yaml
-[tuya_qs_d02]: https://github.com/ImEmJay/esphome-config/blob/master/tuya_qs_d02_01.yml
-[ventilation]: https://github.com/ImEmJay/esphome-config/blob/master/ventilation.yml
+[tuya_qs_d02]: https://github.com/ImEmJay/esphome-config/blob/master/tuya_qs_d02_01.yaml
+[ventilation]: https://github.com/ImEmJay/esphome-config/blob/master/ventilation.yaml
