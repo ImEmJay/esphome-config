@@ -1,0 +1,4 @@
+platform: gpio
+pin: ${motion_pin}
+name: "${device_name} Motion"
+device_class: motion
