@@ -26,6 +26,7 @@ The following features are implemented for every device
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light                                    |
 | [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug                                       |
 | [koogeek_kloe4]     | [Koogeek KLOE4]           | Power Strip                                                 |
+| [room_sensor]       | DIY                    | Multi-sensor node                                           |
 | [shelly_1_light]    | [Shelly 1]                | Relay based light                                           |
 | [shelly_1pm]        | [Shelly 1PM]              | Power Monitoring Relay                                      |
 | [shelly_2_5_light]  | [Shelly 2.5]              | 2 Channel Light Relay with temperature and power monitoring |
@@ -42,6 +43,7 @@ The following features are implemented for every device
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
+| [room_sensor]       | [ESP32]   | -  | x |  - |  - | -               | - |
 | [shelly_1_light]    | [ESP8266] | -  | - |  x |  - | [Binary]        | - |
 | [shelly_1pm]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [shelly_2_5_light]  | [ESP8266] | x  | x |  x |  - | [Binary]        | - |
@@ -52,14 +54,15 @@ The following features are implemented for every device
 
 ## Device specific sensors
 
-| Device  | [Remote Receiver] | [GPIO] |  [DHT]  | Power Sensor | [ADC] | Features
-| --  |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
-| [blitzwolf_bw_rc1]  | x | - | - | - | - | [ir_transmitter] |
-| [shelly_1_light]    | - | x | - | - | - | [light_switch]  |
-| [shelly_1pm]        | - | - | - | [HLW8012] | - | current, power, [total_daily_energy] |
-| [shelly_2_5_light]  | - | - | - | [ADE7953] | [NTC] | current, power, [total_daily_energy], [light_switch], device_temperature |
-| [gosund_sp111]      | - | - | - | [HLW8012] | - | current, power, voltage, [total_daily_energy] |
-| [ventilation]       | - | - | SI7021 | - |  - | temperature, humidity |
+| Device  | [Remote Receiver] | [GPIO] |  [DHT]  | Power Sensor | [ADC] | [I²C] | Features
+| --  |  :--: |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
+| [blitzwolf_bw_rc1]  | x | - | - | - | - | - | [ir_transmitter] |
+| [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance] |
+| [shelly_1_light]    | - | x | - | - | - | - | [light_switch]  |
+| [shelly_1pm]        | - | - | - | [HLW8012] | - | - | current, power, [total_daily_energy] |
+| [shelly_2_5_light]  | - | - | - | [ADE7953] | [NTC] | - | current, power, [total_daily_energy], [light_switch], device_temperature |
+| [gosund_sp111]      | - | - | - | [HLW8012] | - | - | current, power, voltage, [total_daily_energy] |
+| [ventilation]       | - | - | SI7021 | - |  - | - | temperature, humidity |
 
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
@@ -78,15 +81,18 @@ The following features are implemented for every device
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
 [ADC]: https://esphome.io/components/sensor/adc.html
 [ADE7953]: https://esphome.io/components/sensor/ade7953.html
+[BME280]: https://esphome.io/components/sensor/bme280.html
 [Binary]: https://esphome.io/components/light/binary.html
 [Board]: https://esphome.io/components/status_led.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
 [DHT]: https://esphome.io/components/sensor/dht.html
+[ESP32]: https://esphome.io/devices/esp32.html
 [ESP8266]: https://esphome.io/devices/esp8266.html
 [FastLED]: https://esphome.io/components/light/fastled.html
 [GPIO]: https://esphome.io/components/binary_sensor/gpio.html
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
 [Light]: https://esphome.io/components/light.html
+[I²C]: https://esphome.io/components/i2c.html
 [NTC]: https://esphome.io/components/sensor/ntc.html
 [Native API]: https://esphome.io/components/api.html
 [Monochromatic]: https://esphome.io/components/light/monochromatic.html
@@ -109,10 +115,13 @@ The following features are implemented for every device
 [diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yml
 [koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yml
+[illuminance]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/illuminance.yaml
 [ir_receiver]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_receiver/ir_receiver.yaml
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
 [light_switch]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/light_switch.yaml
+[motion]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/motion.yaml
+[room_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/room_sensor_01.yml
 [shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yml
 [shelly_1pm]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1pm_01.yml
 [shelly_2_5_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_2_5_light_01.yml
