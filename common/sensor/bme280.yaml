@@ -1,0 +1,10 @@
+platform: bme280
+temperature:
+  name: "${device_name} Temperature"
+  oversampling: 16x
+pressure:
+  name: "${device_name} Pressure"
+humidity:
+  name: "${device_name} Humidity"
+address: ${bme280_address}
+update_interval: 60s
