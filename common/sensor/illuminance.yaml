@@ -1,6 +1,7 @@
 platform: adc
 pin: ${illuminance_pin}
 name: "${device_name} Illuminance"
+update_interval: 60s
 unit_of_measurement: lx
 filters:
   - lambda: |-
