@@ -22,6 +22,7 @@ The following features are implemented for every device
 
 | Device  | Type  | Description |
 | -- |  --  | --  |
+| [bathroom_sensor]   | DIY                       | Multi-sensor node                                           |
 | [blitzwolf_bw_rc1]  | [Blitzwolf BW-RC1]        | IR Controller                                               |
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light                                    |
 | [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug                                       |
@@ -39,6 +40,7 @@ The following features are implemented for every device
 
 | Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
 | --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
+| [bathroom_sensor]   | [ESP32]   | -  | x |  - |  - | -               | [Xiaomi Miscale] |
 | [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
@@ -56,6 +58,7 @@ The following features are implemented for every device
 
 | Device  | [Remote Receiver] | [GPIO] |  [DHT]  | Power Sensor | [ADC] | [I²C] | Features
 | --  |  :--: |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
+| [bathroom_sensor]   | x | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
 | [blitzwolf_bw_rc1]  | x | - | - | - | - | - | [ir_transmitter] |
 | [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
 | [shelly_1_light]    | - | x | - | - | - | - | [light_switch]  |
@@ -111,6 +114,8 @@ The following features are implemented for every device
 [Web Server]: https://esphome.io/components/web_server.html
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
+[Xiaomi Miscale]: https://esphome.io/components/sensor/xiaomi_miscale.html
+[bathroom_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/bathroom_sensor_01.yaml
 [blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
 [diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yaml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yaml
