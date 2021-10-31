@@ -1,0 +1,3 @@
+platform: ble_rssi
+mac_address: ${miband_mac_address}
+name: "${device_name} MiBand RSSI"
