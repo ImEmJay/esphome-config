@@ -57,7 +57,7 @@ The following features are implemented for every device
 | Device  | [Remote Receiver] | [GPIO] |  [DHT]  | Power Sensor | [ADC] | [I²C] | Features
 | --  |  :--: |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
 | [blitzwolf_bw_rc1]  | x | - | - | - | - | - | [ir_transmitter] |
-| [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance] |
+| [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
 | [shelly_1_light]    | - | x | - | - | - | - | [light_switch]  |
 | [shelly_1pm]        | - | - | - | [HLW8012] | - | - | current, power, [total_daily_energy] |
 | [shelly_2_5_light]  | - | - | - | [ADE7953] | [NTC] | - | current, power, [total_daily_energy], [light_switch], device_temperature |
@@ -120,6 +120,8 @@ The following features are implemented for every device
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
 [light_switch]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/light_switch.yaml
+[miband]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/miband.yaml
+[miband_rssi]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/miband_rssi.yaml
 [motion]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/motion.yaml
 [room_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/room_sensor_01.yaml
 [shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yaml
