@@ -1,0 +1,88 @@
+# Room Sensor
+
+substitutions:
+  device_id: !secret esp_room_sensor_02_device_id
+  device_name: !secret esp_room_sensor_02_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_domain: !secret wifi_domain
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  i2c_scl_pin: GPIO05 # I2C Clock
+  i2c_sda_pin: GPIO04 # I2C Data
+  illuminance_pin: GPIO36 # ADC
+  motion_pin: GPIO14
+
+  bme280_address: '0x76'
+  miband_mac_address: !secret miband_mac_address
+  miscale_mac_address: !secret miscale_mac_address
+  miscale_name_user_1: !secret miscale_name_user_1
+  miscale_min_weight_user_1: !secret miscale_min_weight_user_1
+  miscale_max_weight_user_1: !secret miscale_max_weight_user_1
+  miscale_min_impendance_user_1: !secret miscale_min_impendance_user_1
+  miscale_max_impendance_user_1: !secret miscale_max_impendance_user_1
+
+esphome:
+  name: ${device_id}
+
+  <<: !include common/board/esp32.yaml
+
+<<: !include common/api.yaml
+<<: !include common/i2c.yaml
+<<: !include common/ota.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
+
+esp32_ble_tracker:
+logger:
+
+binary_sensor:
+  - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/miband.yaml
+  - !include common/binary_sensor/motion.yaml #AM312
+
+sensor:
+  - !include common/sensor/bme280.yaml
+  - !include common/sensor/illuminance.yaml #TEMT6000
+  - !include common/sensor/miband_rssi.yaml
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
+  - platform: xiaomi_miscale
+    mac_address: ${miscale_mac_address}
+    weight:
+      name: "${device_name} Mi Scale Weight"
+      id: miscale_weight
+      on_value:
+        then:
+          - lambda: |-
+              if (id(miscale_weight).state >= ${miscale_min_weight_user_1} && id(miscale_weight).state <= ${miscale_max_weight_user_1}) {
+                return id(miscale_weight_user_1).publish_state(x);}
+    impedance:
+      name: "${device_name} Mi Scale Impedance"
+      id: miscale_impedance
+      on_value:
+        then:
+          - lambda: |-
+              if (id(miscale_impedance).state >= ${miscale_min_impendance_user_1} && id(miscale_impedance).state <= ${miscale_max_impendance_user_1}) {
+                return id(miscale_impedance_user_1).publish_state(x);}
+  - platform: template
+    name: "Weight ${miscale_name_user_1}"
+    id: miscale_weight_user_1
+    unit_of_measurement: 'kg'
+    icon: mdi:weight-kilogram
+    accuracy_decimals: 2
+  - platform: template
+    name: "Impedance ${miscale_name_user_1}"
+    id: miscale_impedance_user_1
+    unit_of_measurement: 'ohm'
+    icon: mdi:omega
+    accuracy_decimals: 0
+
+switch:
+  - !include common/switch/restart.yaml
+
+# text_sensor:
+#   - !include common/text_sensor/ble_scanner.yaml
