@@ -1,8 +1,8 @@
 # Room Sensor
 
 substitutions:
-  device_id: !secret esp_room_sensor_02_device_id
-  device_name: !secret esp_room_sensor_02_device_name
+  device_id: !secret esp_bathroom_sensor_01_device_id
+  device_name: !secret esp_bathroom_sensor_01_device_name
 
   api_password: !secret esp_api_password
   ota_password: !secret esp_ota_password
