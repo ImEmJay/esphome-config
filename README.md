@@ -41,7 +41,7 @@ The following features are implemented for every device
 
 | Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
 | --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
-| [bathroom_sensor]   | [ESP32]   | -  | x |  - |  - | -               | [Xiaomi Miscale] |
+| [bathroom_sensor]   | [ESP32]   | -  | x |  - |  - | -               | [Xiaomi Miscale], [bluetooth_proxy]|
 | [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
@@ -120,6 +120,7 @@ The following features are implemented for every device
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
 [Xiaomi Miscale]: https://esphome.io/components/sensor/xiaomi_miscale.html
 [bathroom_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/bathroom_sensor_01.yaml
+[bluetooth_proxy]: https://github.com/ImEmJay/esphome-config/blob/master/common/bluetooth_proxy.yaml
 [blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
 [diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yaml
 [espcam]: https://github.com/ImEmJay/esphome-config/blob/master/espcam_01.yaml
