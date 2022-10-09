@@ -16,7 +16,6 @@ substitutions:
   motion_pin: GPIO14
 
   bme280_address: '0x76'
-  miband_mac_address: !secret miband_mac_address
   miscale_mac_address: !secret miscale_mac_address
   miscale_name_user_1: !secret miscale_name_user_1
   miscale_min_weight_user_1: !secret miscale_min_weight_user_1
@@ -41,7 +40,6 @@ logger:
 
 binary_sensor:
   - !include common/binary_sensor/device_status.yaml
-  - !include common/binary_sensor/miband.yaml
   - !include common/binary_sensor/motion.yaml #AM312
 
 sensor:
