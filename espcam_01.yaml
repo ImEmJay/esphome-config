@@ -1,0 +1,46 @@
+# Gosund SP111 Power Monitoring Plug
+
+substitutions:
+  device_id: !secret esp_espcam_01_device_id
+  device_name: !secret esp_espcam_01_device_name
+
+  api_password: !secret esp_api_password
+  ota_password: !secret esp_ota_password
+  wifi_domain: !secret wifi_domain
+  wifi_ssid: !secret wifi_ssid
+  wifi_password: !secret wifi_password
+
+  status_led_pin: GPIO00 # Blue LED
+
+  camera_jpeg_quality: '10' # Default 10
+  camera_max_framerate: 10 fps # Default 10 fps
+  camera_resolution: 640x480 # Default 640x480
+
+esphome:
+  name: ${device_id}
+
+  <<: !include common/board/esp32.yaml
+
+<<: !include common/api.yaml
+<<: !include common/ota.yaml
+<<: !include common/status_led.yaml
+<<: !include common/time.yaml
+<<: !include common/webserver.yaml
+<<: !include common/wifi.yaml
+
+<<: !include common/camera/ai_thinker.yaml
+
+logger:
+
+binary_sensor:
+  - !include common/binary_sensor/device_status.yaml
+
+sensor:
+  - !include common/sensor/uptime.yaml
+  - !include common/sensor/wifi_signal.yaml
+
+switch:
+  - !include common/switch/restart.yaml
+
+
+
