@@ -23,6 +23,7 @@ esphome:
   <<: !include common/board/esp32.yaml
 
 <<: !include common/api.yaml
+<<: !include common/bluetooth_proxy.yaml
 <<: !include common/i2c.yaml
 <<: !include common/ota.yaml
 <<: !include common/time.yaml
