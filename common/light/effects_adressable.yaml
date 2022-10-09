@@ -7,4 +7,8 @@ effects:
   - addressable_scan:
   - strobe:
   - addressable_twinkle:
+  - wled:
+  - e131:
+      universe: 1
+      channels: RGB
   - random:

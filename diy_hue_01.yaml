@@ -26,7 +26,11 @@ substitutions:
 esphome:
   name: ${device_id}
 
-  <<: !include common/board/esp8266.yaml
+esp8266:
+  board: esp01_1m
+  restore_from_flash: True
+  framework:
+    version: 2.7.4
 
 <<: !include common/api.yaml
 <<: !include common/ota.yaml
@@ -36,6 +40,11 @@ esphome:
 <<: !include common/wifi.yaml
 
 logger:
+
+wled:
+
+e131:
+  method: multicast
 
 binary_sensor:
   - !include common/binary_sensor/device_status.yaml
