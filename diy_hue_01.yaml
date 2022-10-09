@@ -14,12 +14,12 @@ substitutions:
   status_led_pin: GPIO02 # Blue LED
 
   chipset: WS2811
-  color_correct_r: 100%
-  color_correct_g: 100%
-  color_correct_b: 100%
+  color_correct_r: 95%
+  color_correct_g: 95%
+  color_correct_b: 95%
   default_transition_length: 1s # Default 1s
   gamma_correct: '2.8' # Default 2.8
-  num_leds: '60'
+  num_leds: '24'
   restore_mode: RESTORE_DEFAULT_OFF
   rgb_order: GRB
 
