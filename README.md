@@ -25,6 +25,7 @@ The following features are implemented for every device
 | [bathroom_sensor]   | DIY                       | Multi-sensor node                                           |
 | [blitzwolf_bw_rc1]  | [Blitzwolf BW-RC1]        | IR Controller                                               |
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light                                    |
+| [espcam]            | [AI-Thinker ESP32-CAM]    | IP Camera                                                   |
 | [gosund_sp111]      | [Gosund SP111]            | Power Monitoring Plug                                       |
 | [koogeek_kloe4]     | [Koogeek KLOE4]           | Power Strip                                                 |
 | [room_sensor]       | DIY                    | Multi-sensor node                                           |
@@ -44,6 +45,7 @@ The following features are implemented for every device
 | [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
+| [espcam]            | [ESP32]   | -  | x |  - |  - | [ESP32 Camera]  | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
 | [room_sensor]       | [ESP32]   | -  | x |  - |  - | -               | - |
 | [shelly_1_light]    | [ESP8266] | -  | - |  x |  - | [Binary]        | - |
@@ -71,6 +73,7 @@ The following features are implemented for every device
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
 [Home Assistant]: https://www.home-assistant.io/
+[AI-Thinker ESP32-CAM]: http://www.ai-thinker.com/pro_view-24.html
 [Blitzwolf BW-RC1]: https://www.blitzwolf.com/BlitzWolf%C2%A0BW-RC1-WiFi-Smart-IR-Controller-with-360%C2%B0-Transmission,-APP-Control,-Works-with-Alexa,-Automatic-Identification,-DIY-Pairing-and-Slim-Design-p-409.html
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
 [Koogeek KLOE4]: https://www.koogeek.com/p-kloe4.html
@@ -90,6 +93,7 @@ The following features are implemented for every device
 [Captive Portal]: https://esphome.io/components/captive_portal.html
 [DHT]: https://esphome.io/components/sensor/dht.html
 [ESP32]: https://esphome.io/devices/esp32.html
+[ESP32 Camera]: https://esphome.io/components/esp32_camera.html
 [ESP8266]: https://esphome.io/devices/esp8266.html
 [FastLED]: https://esphome.io/components/light/fastled.html
 [GPIO]: https://esphome.io/components/binary_sensor/gpio.html
@@ -118,6 +122,7 @@ The following features are implemented for every device
 [bathroom_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/bathroom_sensor_01.yaml
 [blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
 [diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yaml
+[espcam]: https://github.com/ImEmJay/esphome-config/blob/master/espcam_01.yaml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yaml
 [koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yaml
 [illuminance]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/illuminance.yaml
