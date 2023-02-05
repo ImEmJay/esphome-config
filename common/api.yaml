@@ -1,2 +1,3 @@
 api:
-  password: ${api_password}
+  encryption:
+    key: ${api_encryption_key}

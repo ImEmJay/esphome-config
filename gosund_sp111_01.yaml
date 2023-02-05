@@ -4,7 +4,7 @@ substitutions:
   device_id: !secret esp_gosund_sp111_01_device_id
   device_name: !secret esp_gosund_sp111_01_device_name
 
-  api_password: !secret esp_api_password
+  api_encryption_key: !secret esp_api_encryption_key
   ota_password: !secret esp_ota_password
   wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
