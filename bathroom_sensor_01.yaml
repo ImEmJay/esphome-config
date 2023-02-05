@@ -46,7 +46,6 @@ binary_sensor:
 sensor:
   - !include common/sensor/bme280.yaml
   - !include common/sensor/illuminance.yaml #TEMT6000
-  - !include common/sensor/miband_rssi.yaml
   - !include common/sensor/uptime.yaml
   - !include common/sensor/wifi_signal.yaml
   - platform: xiaomi_miscale
