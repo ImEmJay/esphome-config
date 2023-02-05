@@ -3,4 +3,11 @@ name: "light_id"
 id: light_id
 update_interval: 24h
 lambda: |-
-  return {"esphome_diyhue_light;mac_address;light_name;ct_boost;rgb_boost"};
+    char response[100];
+    memset( response, 0, 100 );
+    strcat( response, "esphome_diyhue_light;");
+    strcat( response, WiFi.macAddress().c_str());
+    strcat( response, ";");
+    strcat( response, App.get_name().c_str());
+    strcat( response, ";0;0" ); // ;CT_BOOST;RGB_BOOST values go here; Replace with 0 to disable
+    return { response };
