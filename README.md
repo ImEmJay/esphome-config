@@ -22,7 +22,6 @@ The following features are implemented for every device
 
 | Device  | Type  | Description |
 | -- |  --  | --  |
-| [bathroom_sensor]   | DIY                       | Multi-sensor node                                           |
 | [blitzwolf_bw_rc1]  | [Blitzwolf BW-RC1]        | IR Controller                                               |
 | [diy_hue]           | [DIY Hue]                 | Hue compatible DIY light                                    |
 | [espcam]            | [AI-Thinker ESP32-CAM]    | IP Camera                                                   |
@@ -41,7 +40,6 @@ The following features are implemented for every device
 
 | Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
 | --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
-| [bathroom_sensor]   | [ESP32]   | -  | x |  - |  - | -               | [Xiaomi Miscale], [bluetooth_proxy]|
 | [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
 | [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
@@ -60,7 +58,6 @@ The following features are implemented for every device
 
 | Device  | [Remote Receiver] | [GPIO] |  [DHT]  | Power Sensor | [ADC] | [I²C] | Features
 | --  |  :--: |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
-| [bathroom_sensor]   | x | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
 | [blitzwolf_bw_rc1]  | x | - | - | - | - | - | [ir_transmitter] |
 | [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [homeassistant_ble_gateway_devices], [homeassistant_ble_gateway_discovery] |
 | [shelly_1_light]    | - | x | - | - | - | - | [light_switch]  |
@@ -123,8 +120,6 @@ The following features are implemented for every device
 [Web Server]: https://esphome.io/components/web_server.html
 [Wifi]: https://esphome.io/components/wifi.html
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
-[Xiaomi Miscale]: https://esphome.io/components/sensor/xiaomi_miscale.html
-[bathroom_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/bathroom_sensor_01.yaml
 [ble_gateway]: https://github.com/ImEmJay/esphome-config/blob/master/common/ble_gateway.yaml
 [bluetooth_proxy]: https://github.com/ImEmJay/esphome-config/blob/master/common/bluetooth_proxy.yaml
 [blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
@@ -139,8 +134,6 @@ The following features are implemented for every device
 [ir_transmitter]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_transmitter/ir_transmitter.yaml
 [light_id]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/light_id.yaml
 [light_switch]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/light_switch.yaml
-[miband]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/miband.yaml
-[miband_rssi]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/miband_rssi.yaml
 [motion]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/motion.yaml
 [room_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/room_sensor_01.yaml
 [shelly_1_light]: https://github.com/ImEmJay/esphome-config/blob/master/shelly_1_light_01.yaml
