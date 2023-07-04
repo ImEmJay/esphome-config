@@ -1,5 +1,5 @@
 ble_gateway:
-  id: ble_gateway
+  id: blegateway
   on_ble_advertise:
     then:
       homeassistant.event:

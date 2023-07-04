@@ -4,4 +4,4 @@ entity_id: ${homeassistant_ble_gateway_devices_entity_id} #binary_sensor.ble_gat
 attribute: ${homeassistant_ble_gateway_devices_attribute} #devices
 on_value:
   then:
-    lambda: id(ble_gateway).set_devices(x);
+    lambda: id(blegateway).set_devices(x);
