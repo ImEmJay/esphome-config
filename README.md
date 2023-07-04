@@ -69,6 +69,11 @@ The following features are implemented for every device
 | [gosund_sp111]      | - | - | - | [HLW8012] | - | - | current, power, voltage, [total_daily_energy] |
 | [ventilation]       | - | - | SI7021 | - |  - | - | temperature, humidity |
 
+## External Components
+
+- [BLE Gateway]
+
+[BLE Gateway]: https://github.com/myhomeiot/esphome-components#ble-gateway
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg

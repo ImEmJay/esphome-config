@@ -1,0 +1,2 @@
+source: github://myhomeiot/esphome-components
+components: [ble_gateway]

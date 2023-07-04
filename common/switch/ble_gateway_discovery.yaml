@@ -1,0 +1,9 @@
+platform: template
+id: ble_gateway_discovery
+name: "${device_name} BLE Gateway Discovery"
+icon: mdi:bluetooth-connect
+lambda: return id(ble_gateway).get_discovery();
+turn_on_action: [lambda: id(ble_gateway).set_discovery(true);]
+turn_off_action: [lambda: id(ble_gateway).set_discovery(false);]
+disabled_by_default: true
+entity_category: config

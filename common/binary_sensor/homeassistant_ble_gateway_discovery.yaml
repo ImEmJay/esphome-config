@@ -1,0 +1,7 @@
+platform: homeassistant
+id: homeassistant_ble_gateway_discovery
+entity_id: ${homeassistant_ble_gateway_discovery_entity_id} # Default binary_sensor.ble_gateway
+attribute: ${homeassistant_ble_gateway_discovery_attribute} # Default discovery
+on_state:
+  then:
+    lambda: id(ble_gateway).set_discovery(x);
