@@ -16,6 +16,13 @@ substitutions:
   motion_pin: GPIO14
 
   bme280_address: '0x76'
+  homeassistant_ble_gateway_devices_attribute: 'devices'
+  homeassistant_ble_gateway_devices_entity_id: 'binary_sensor.ble_gateway'
+  homeassistant_ble_gateway_discovery_attribute: 'discovery'
+  homeassistant_ble_gateway_discovery_entity_id: 'binary_sensor.ble_gateway'
+
+external_components:
+  - !include common/external_components/ble_gateway.yaml
 
 esphome:
   name: ${device_id}
@@ -23,6 +30,7 @@ esphome:
   <<: !include common/board/esp32.yaml
 
 <<: !include common/api.yaml
+<<: !include common/ble_gateway.yaml
 <<: !include common/bluetooth_proxy.yaml
 <<: !include common/i2c.yaml
 <<: !include common/ota.yaml
@@ -35,6 +43,7 @@ logger:
 
 binary_sensor:
   - !include common/binary_sensor/device_status.yaml
+  - !include common/binary_sensor/homeassistant_ble_gateway_discovery.yaml
   - !include common/binary_sensor/motion.yaml #AM312
 
 sensor:
@@ -44,4 +53,9 @@ sensor:
   - !include common/sensor/wifi_signal.yaml
 
 switch:
+  - !include common/switch/ble_gateway_discovery.yaml
   - !include common/switch/restart.yaml
+
+text_sensor:
+  - !include common/text_sensor/homeassistant_ble_gateway_devices.yaml
+

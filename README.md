@@ -47,7 +47,7 @@ The following features are implemented for every device
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [espcam]            | [ESP32]   | -  | x |  - |  - | [ESP32 Camera]  | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
-| [room_sensor]       | [ESP32]   | -  | x |  - |  - | -               | - |
+| [room_sensor]       | [ESP32]   | -  | x |  - |  - | -               | [ble_gateway], [bluetooth_proxy] |
 | [shelly_1_light]    | [ESP8266] | -  | - |  x |  - | [Binary]        | - |
 | [shelly_1pm]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [shelly_2_5_light]  | [ESP8266] | x  | x |  x |  - | [Binary]        | - |
@@ -62,7 +62,7 @@ The following features are implemented for every device
 | --  |  :--: |  :--: |  :--: |  :--: |  :--: |  :--: | --  |
 | [bathroom_sensor]   | x | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
 | [blitzwolf_bw_rc1]  | x | - | - | - | - | - | [ir_transmitter] |
-| [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [miband], [miband_rssi] |
+| [room_sensor]       | - | x | - | - | - | [BME280] | temperature, humidity, pressure, [motion], [illuminance], [homeassistant_ble_gateway_devices], [homeassistant_ble_gateway_discovery] |
 | [shelly_1_light]    | - | x | - | - | - | - | [light_switch]  |
 | [shelly_1pm]        | - | - | - | [HLW8012] | - | - | current, power, [total_daily_energy] |
 | [shelly_2_5_light]  | - | - | - | [ADE7953] | [NTC] | - | current, power, [total_daily_energy], [light_switch], device_temperature |
@@ -125,11 +125,14 @@ The following features are implemented for every device
 [Wifi Signal Sensor]: https://esphome.io/components/sensor/wifi_signal.html
 [Xiaomi Miscale]: https://esphome.io/components/sensor/xiaomi_miscale.html
 [bathroom_sensor]: https://github.com/ImEmJay/esphome-config/blob/master/bathroom_sensor_01.yaml
+[ble_gateway]: https://github.com/ImEmJay/esphome-config/blob/master/common/ble_gateway.yaml
 [bluetooth_proxy]: https://github.com/ImEmJay/esphome-config/blob/master/common/bluetooth_proxy.yaml
 [blitzwolf_bw_rc1]: https://github.com/ImEmJay/esphome-config/blob/master/blitzwolf_bw_rc1_01.yaml
 [diy_hue]: https://github.com/ImEmJay/esphome-config/blob/master/diy_hue_01.yaml
 [espcam]: https://github.com/ImEmJay/esphome-config/blob/master/espcam_01.yaml
 [gosund_sp111]: https://github.com/ImEmJay/esphome-config/blob/master/gosund_sp111_01.yaml
+[homeassistant_ble_gateway_devices]: https://github.com/ImEmJay/esphome-config/blob/master/common/text_sensor/homeassistant_ble_gateway_devices.yaml
+[homeassistant_ble_gateway_discovery]: https://github.com/ImEmJay/esphome-config/blob/master/common/binary_sensor/homeassistant_ble_gateway_discovery.yaml
 [koogeek_kloe4]: https://github.com/ImEmJay/esphome-config/blob/master/koogeek_kloe4_01.yaml
 [illuminance]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/illuminance.yaml
 [ir_receiver]: https://github.com/ImEmJay/esphome-config/blob/master/common/remote_receiver/ir_receiver.yaml
