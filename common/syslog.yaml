@@ -1,0 +1,3 @@
+syslog:
+  ip_address: ${syslog_ip_address}
+  port: ${syslog_port}
