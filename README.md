@@ -13,6 +13,7 @@ The following features are implemented for every device
 - [Native API] connection for [Home Assistant]
 - [Web Server] based device control
 - [Time] synchronization with [Home Assistant]
+- [Syslog] output attached to [Logger]
 - [Status Binary Sensor] (device status)
 - [Wifi Signal Sensor]
 - [Uptime Sensor]
@@ -69,12 +70,14 @@ The following features are implemented for every device
 ## External Components
 
 - [BLE Gateway]
+- [Syslog]
 
 [BLE Gateway]: https://github.com/myhomeiot/esphome-components#ble-gateway
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
 [Home Assistant]: https://www.home-assistant.io/
+[Syslog]: https://github.com/TheStaticTurtle/esphome_syslog
 [AI-Thinker ESP32-CAM]: http://www.ai-thinker.com/pro_view-24.html
 [Blitzwolf BW-RC1]: https://www.blitzwolf.com/BlitzWolf%C2%A0BW-RC1-WiFi-Smart-IR-Controller-with-360%C2%B0-Transmission,-APP-Control,-Works-with-Alexa,-Automatic-Identification,-DIY-Pairing-and-Slim-Design-p-409.html
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
@@ -101,6 +104,7 @@ The following features are implemented for every device
 [GPIO]: https://esphome.io/components/binary_sensor/gpio.html
 [HLW8012]: https://esphome.io/components/sensor/hlw8012.html
 [Light]: https://esphome.io/components/light.html
+[Logger]: https://esphome.io/components/logger.html
 [I²C]: https://esphome.io/components/i2c.html
 [NTC]: https://esphome.io/components/sensor/ntc.html
 [Native API]: https://esphome.io/components/api.html
