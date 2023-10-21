@@ -1,0 +1,12 @@
+---
+
+platform: cwww
+name: "cwww_led"
+id: cwww_led
+default_transition_length: ${default_transition_length}
+constant_brightness: ${constant_brightness}
+gamma_correct: ${gamma_correct}
+cold_white: output_cw
+warm_white: output_ww
+cold_white_color_temperature: ${cold_white_color_temperature}
+warm_white_color_temperature: ${warm_white_color_temperature}
