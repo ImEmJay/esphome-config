@@ -36,6 +36,7 @@ The following features are implemented for every device
 | [sonoff_s20]        | [Sonoff S20]              | Power Plug                                                  |
 | [tuya_qs_d02]       | [Tuya QS-WiFi-D02-TRIAC]  | 2 Channel Dimmer                                            |
 | [ventilation]       | [Sonoff TH10]             | Humidity controlled Relay                                   |
+| [yeelight_yltd003]  | [Yeelight YLTD003]        | Hue compatible Monitor Light Bar ([Disassembly])                           |
 
 ## Device specific firmware features
 
@@ -54,6 +55,7 @@ The following features are implemented for every device
 | [sonoff_s20]        | [ESP8266] | x  | x |  x |  - | -               | - |
 | [tuya_qs_d02]       | [ESP8266] | -  | - |  - |  x | [Monochromatic] | - |
 | [ventilation]       | [ESP8266] | x  | x |  x |  - | -               | - |
+| [yeelight_yltd003]  | [ESP8266] | -  | x |  - |  - | [CWWW], [NeoPixelBus] | - |
 
 ## Device specific sensors
 
@@ -67,12 +69,17 @@ The following features are implemented for every device
 | [gosund_sp111]      | - | - | - | [HLW8012] | - | - | current, power, voltage, [total_daily_energy] |
 | [ventilation]       | - | - | SI7021 | - |  - | - | temperature, humidity |
 
+## Disassembly Instructions
+
+- [Yeelight YLTD003](https://github.com/dckiller51/esphome-yeelight-led-screen-light-bar#disassembly)
+
 ## External Components
 
 - [BLE Gateway]
 - [DDP]
 - [Syslog]
 
+[Disassembly]: #disassembly-instructions
 [BLE Gateway]: https://github.com/myhomeiot/esphome-components#ble-gateway
 [DDP]: https://github.com/KaufHA/common/tree/main/components#ddp
 [DIY Hue]: https://diyhue.org/
@@ -90,6 +97,7 @@ The following features are implemented for every device
 [Sonoff Basic]: https://sonoff.tech/product/wifi-diy-smart-switches/basicr2
 [Sonoff S20]: https://sonoff.tech/product/wifi-smart-plugs/s20
 [Sonoff TH10]: https://sonoff.tech/product/wifi-diy-smart-switches/th10-th16
+[Yeelight YLTD003]: https://store.yeelight.com/products/yeelight-monitor-light-bar-pro-flagship-edition?variant=47054979727644
 [Tuya QS-WiFi-D02-TRIAC]: https://expo.tuya.com/product/373634s
 [Access Point Mode]: https://esphome.io/components/wifi.html#access-point-mode
 [ADC]: https://esphome.io/components/sensor/adc.html
@@ -97,6 +105,7 @@ The following features are implemented for every device
 [BME280]: https://esphome.io/components/sensor/bme280.html
 [Binary]: https://esphome.io/components/light/binary.html
 [Board]: https://esphome.io/components/status_led.html
+[CWWW]: https://esphome.io/components/light/cwww.html
 [Captive Portal]: https://esphome.io/components/captive_portal.html
 [DHT]: https://esphome.io/components/sensor/dht.html
 [ESP32]: https://esphome.io/devices/esp32.html
@@ -152,3 +161,4 @@ The following features are implemented for every device
 [total_daily_energy]: https://github.com/ImEmJay/esphome-config/blob/master/common/sensor/total_daily_energy.yaml
 [tuya_qs_d02]: https://github.com/ImEmJay/esphome-config/blob/master/tuya_qs_d02_01.yaml
 [ventilation]: https://github.com/ImEmJay/esphome-config/blob/master/ventilation.yaml
+[yeelight_yltd003]: https://github.com/ImEmJay/esphome-config/blob/master/yeelight_yltd003_01.yaml
