@@ -42,7 +42,7 @@ The following features are implemented for every device
 | Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
 | --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
 | [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
-| [diy_hue]           | [ESP8266] | -  | x |  - |  - | [FastLED]       | - |
+| [diy_hue]           | [ESP8266] | -  | x |  - |  - | [NeoPixelBus]       | - |
 | [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
 | [espcam]            | [ESP32]   | -  | x |  - |  - | [ESP32 Camera]  | - |
 | [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
@@ -108,6 +108,7 @@ The following features are implemented for every device
 [I²C]: https://esphome.io/components/i2c.html
 [NTC]: https://esphome.io/components/sensor/ntc.html
 [Native API]: https://esphome.io/components/api.html
+[NeoPixelBus]: https://esphome.io/components/light/neopixelbus.html
 [Monochromatic]: https://esphome.io/components/light/monochromatic.html
 [Over The Air]: https://esphome.io/components/ota.html
 [Physical Button]: https://esphome.io/components/binary_sensor/gpio.html
