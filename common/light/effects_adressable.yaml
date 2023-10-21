@@ -7,6 +7,7 @@ effects:
   - addressable_scan:
   - strobe:
   - addressable_twinkle:
+  - addressable_ddp:
   - wled:
   - e131:
       universe: 1

@@ -70,9 +70,11 @@ The following features are implemented for every device
 ## External Components
 
 - [BLE Gateway]
+- [DDP]
 - [Syslog]
 
 [BLE Gateway]: https://github.com/myhomeiot/esphome-components#ble-gateway
+[DDP]: https://github.com/KaufHA/common/tree/main/components#ddp
 [DIY Hue]: https://diyhue.org/
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
