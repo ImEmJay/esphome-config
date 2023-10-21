@@ -1,0 +1,5 @@
+source:
+  type: git
+  url: https://github.com/KaufHA/common
+components: [ ddp ]
+refresh: always

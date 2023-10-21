@@ -26,6 +26,7 @@ substitutions:
   rgb_order: GRB
 
 external_components:
+  - !include common/external_components/ddp.yaml
   - !include common/external_components/syslog.yaml
 
 esphome:
@@ -43,8 +44,8 @@ esp8266:
 <<: !include common/webserver.yaml
 <<: !include common/wifi.yaml
 
+ddp:
 logger:
-
 wled:
 
 e131:
