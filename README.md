@@ -40,22 +40,22 @@ The following features are implemented for every device
 
 ## Device specific firmware features
 
-| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [UART] | [Light] | [Remote Transmitter]
-| --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: |
-| [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - | -               | [ir_receiver] |
-| [diy_hue]           | [ESP8266] | -  | x |  - |  - | [NeoPixelBus]       | - |
-| [gosund_sp111]      | [ESP8266] | x  | x |  x |  - | -               | - |
-| [espcam]            | [ESP32]   | -  | x |  - |  - | [ESP32 Camera]  | - |
-| [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - | -               | - |
-| [room_sensor]       | [ESP32]   | -  | x |  - |  - | -               | [ble_gateway], [bluetooth_proxy] |
-| [shelly_1_light]    | [ESP8266] | -  | - |  x |  - | [Binary]        | - |
-| [shelly_1pm]        | [ESP8266] | x  | x |  x |  - | -               | - |
-| [shelly_2_5_light]  | [ESP8266] | x  | x |  x |  - | [Binary]        | - |
-| [sonoff_basic]      | [ESP8266] | x  | x |  x |  - | -               | - |
-| [sonoff_s20]        | [ESP8266] | x  | x |  x |  - | -               | - |
-| [tuya_qs_d02]       | [ESP8266] | -  | - |  - |  x | [Monochromatic] | - |
-| [ventilation]       | [ESP8266] | x  | x |  x |  - | -               | - |
-| [yeelight_yltd003]  | [ESP8266] | -  | x |  - |  - | [CWWW], [NeoPixelBus] | - |
+| Device  | [Platform]  | [Physical Button]  | [Status LED] | [Relay] | [Power Supply] | [UART] | [Light] | [Remote Transmitter]
+| --  |  :--: |  :--:  | :--:  |  :--: |  :--: |  :--: |  :--: | :--: |
+| [blitzwolf_bw_rc1]  | [ESP8266] | -  | x |  - |  - |  - | -               | [ir_receiver] |
+| [diy_hue]           | [ESP8266] | -  | x |  - |  - |  - | [NeoPixelBus]   | - |
+| [gosund_sp111]      | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [espcam]            | [ESP32]   | -  | x |  - |  - |  - | [ESP32 Camera]  | - |
+| [koogeek_kloe4]     | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [room_sensor]       | [ESP32]   | -  | x |  - |  - |  - | -               | [ble_gateway], [bluetooth_proxy] |
+| [shelly_1_light]    | [ESP8266] | -  | - |  x |  - |  - | [Binary]        | - |
+| [shelly_1pm]        | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [shelly_2_5_light]  | [ESP8266] | x  | x |  x |  - |  - | [Binary]        | - |
+| [sonoff_basic]      | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [sonoff_s20]        | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [tuya_qs_d02]       | [ESP8266] | -  | - |  - |  - |  x | [Monochromatic] | - |
+| [ventilation]       | [ESP8266] | x  | x |  x |  - |  - | -               | - |
+| [yeelight_yltd003]  | [ESP8266] | -  | x |  - |  x |  - | [CWWW], [NeoPixelBus] | - |
 
 ## Device specific sensors
 
@@ -124,6 +124,7 @@ The following features are implemented for every device
 [Over The Air]: https://esphome.io/components/ota.html
 [Physical Button]: https://esphome.io/components/binary_sensor/gpio.html
 [Platform]: https://esphome.io/components/status_led.html
+[Power Supply]: https://esphome.io/components/power_supply.html
 [Relay]: https://esphome.io/cookbook/relay.html
 [Remote Receiver]: https://esphome.io/components/remote_receiver.html
 [Remote Transmitter]: https://esphome.io/components/remote_transmitter.html
