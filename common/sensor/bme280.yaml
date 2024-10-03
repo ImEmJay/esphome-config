@@ -1,4 +1,4 @@
-platform: bme280
+platform: bme280_i2c
 temperature:
   name: "${device_name} Temperature"
   oversampling: 16x
