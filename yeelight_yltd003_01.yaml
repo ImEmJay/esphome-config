@@ -16,6 +16,7 @@ substitutions:
   output_cw_pin: GPIO12
   output_ww_pin: GPIO5
   status_led_pin: GPIO02 # Blue LED
+  power_supply_pin: GPIO4
 
   chipset: WS2812
   color_correct_r: 95%
@@ -44,6 +45,7 @@ esp8266:
 <<: !include common/api.yaml
 <<: !include common/ota.yaml
 <<: !include common/status_led.yaml
+<<: !include common/power_supply.yaml
 <<: !include common/syslog.yaml
 <<: !include common/time.yaml
 <<: !include common/webserver.yaml
@@ -61,15 +63,17 @@ binary_sensor:
 
 light:
   - !include common/light/cwww.yaml
-  - !include common/light/neopixelbus.yaml
+  - !include common/light/neopixelbus_psu.yaml
 
 output:
   - platform: esp8266_pwm
     pin: ${output_cw_pin}
     id: output_cw
+    power_supply: power
   - platform: esp8266_pwm
     pin: ${output_ww_pin}
     id: output_ww
+    power_supply: power
 
 sensor:
   - !include common/sensor/uptime.yaml
