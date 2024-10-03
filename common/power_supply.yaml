@@ -1,0 +1,6 @@
+power_supply:
+  - id: power
+    pin: ${power_supply_pin}
+    enable_time: 0s
+    keep_on_time: 0s
+
