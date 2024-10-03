@@ -15,7 +15,6 @@ substitutions:
   data_pin: GPIO13
   output_cw_pin: GPIO12
   output_ww_pin: GPIO5
-  status_led_pin: GPIO02 # Blue LED
   power_supply_pin: GPIO4
 
   chipset: WS2812
@@ -44,7 +43,6 @@ esp8266:
 
 <<: !include common/api.yaml
 <<: !include common/ota.yaml
-<<: !include common/status_led.yaml
 <<: !include common/power_supply.yaml
 <<: !include common/syslog.yaml
 <<: !include common/time.yaml
