@@ -31,14 +31,13 @@ esphome:
   <<: !include common/board/esp8266.yaml
 
 <<: !include common/api.yaml
+<<: !include common/logger.yaml
 <<: !include common/ota.yaml
 <<: !include common/status_led.yaml
 <<: !include common/syslog.yaml
 <<: !include common/time.yaml
 <<: !include common/webserver.yaml
 <<: !include common/wifi.yaml
-
-logger:
 
 binary_sensor:
   - !include common/binary_sensor/device_status.yaml

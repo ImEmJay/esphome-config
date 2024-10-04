@@ -42,6 +42,7 @@ esp8266:
   restore_from_flash: True
 
 <<: !include common/api.yaml
+<<: !include common/logger.yaml
 <<: !include common/ota.yaml
 <<: !include common/power_supply.yaml
 <<: !include common/syslog.yaml
@@ -50,7 +51,6 @@ esp8266:
 <<: !include common/wifi.yaml
 
 ddp:
-logger:
 wled:
 
 e131:

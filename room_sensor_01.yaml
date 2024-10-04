@@ -36,6 +36,7 @@ esphome:
 <<: !include common/ble_gateway.yaml
 <<: !include common/bluetooth_proxy.yaml
 <<: !include common/i2c.yaml
+<<: !include common/logger.yaml
 <<: !include common/ota.yaml
 <<: !include common/syslog.yaml
 <<: !include common/time.yaml
@@ -43,7 +44,6 @@ esphome:
 <<: !include common/wifi.yaml
 
 esp32_ble_tracker:
-logger:
 
 binary_sensor:
   - !include common/binary_sensor/device_status.yaml
