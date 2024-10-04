@@ -1,4 +1,4 @@
-platform: ade7953
+platform: ade7953_i2c
 voltage:
   name: "${device_name} Voltage"
 current_a:
