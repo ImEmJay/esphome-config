@@ -11,6 +11,7 @@ substitutions:
   wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
   wifi_password: !secret wifi_password
+  wifi_power_save_mode: NONE
 
   button_pin: GPIO03 # Power Button
   status_led_pin: GPIO1 # Green LED

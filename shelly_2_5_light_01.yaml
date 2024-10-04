@@ -11,6 +11,7 @@ substitutions:
   wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
   wifi_password: !secret wifi_password
+  wifi_power_save_mode: NONE
 
   i2c_scl_pin: GPIO14 # I2C Clock
   i2c_sda_pin: GPIO12 # I2C Data

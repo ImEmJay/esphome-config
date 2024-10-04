@@ -13,6 +13,7 @@ substitutions:
   wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
   wifi_password: !secret wifi_password
+  wifi_power_save_mode: NONE
 
   pwm1_pin: GPIO14
   pwm2_pin: GPIO16

@@ -11,6 +11,7 @@ substitutions:
   wifi_domain: !secret wifi_domain
   wifi_ssid: !secret wifi_ssid
   wifi_password: !secret wifi_password
+  wifi_power_save_mode: NONE
 
   button_pin: GPIO04 # Power Button
   power_cf_pin: GPIO05 # Powermeter
