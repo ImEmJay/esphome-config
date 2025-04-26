@@ -31,7 +31,7 @@ external_components:
 esphome:
   name: ${device_id}
 
-  <<: !include common/board/esp32.yaml
+<<: !include common/board/esp32_wemos_d1_mini32.yaml
 
 <<: !include common/api.yaml
 <<: !include common/ble_gateway.yaml

@@ -34,7 +34,7 @@ external_components:
 esphome:
   name: ${device_id}
 
-  <<: !include common/board/esp8266.yaml
+<<: !include common/board/esp8266_esp01_1m.yaml
 
 <<: !include common/api.yaml
 <<: !include common/i2c.yaml
