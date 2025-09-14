@@ -1,0 +1,2 @@
+id: syslog_udp
+addresses: ${syslog_udp_addresses}
