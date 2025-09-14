@@ -13,7 +13,7 @@ The following features are implemented for every device
 - [Native API] connection for [Home Assistant]
 - [Web Server] based device control
 - [Time] synchronization with [Home Assistant]
-- [Syslog] output attached to [Logger]
+- [Syslog] output 
 - [Status Binary Sensor] (device status)
 - [Wifi Signal Sensor]
 - [Uptime Sensor]
@@ -77,7 +77,6 @@ The following features are implemented for every device
 
 - [BLE Gateway]
 - [DDP]
-- [Syslog]
 
 [Disassembly]: #disassembly-instructions
 [BLE Gateway]: https://github.com/myhomeiot/esphome-components#ble-gateway
@@ -86,7 +85,6 @@ The following features are implemented for every device
 [ESPHome]: https://esphome.io/
 [ESPHome_logo]: https://esphome.io/_images/logo-text.svg
 [Home Assistant]: https://www.home-assistant.io/
-[Syslog]: https://github.com/TheStaticTurtle/esphome_syslog
 [AI-Thinker ESP32-CAM]: http://www.ai-thinker.com/pro_view-24.html
 [Blitzwolf BW-RC1]: https://www.blitzwolf.com/BlitzWolf%C2%A0BW-RC1-WiFi-Smart-IR-Controller-with-360%C2%B0-Transmission,-APP-Control,-Works-with-Alexa,-Automatic-Identification,-DIY-Pairing-and-Slim-Design-p-409.html
 [Gosund SP111]: https://www.gosund.com/download/smart_plug/126.html
@@ -131,6 +129,7 @@ The following features are implemented for every device
 [Restart Switch]: https://esphome.io/components/switch/restart.html
 [Status Binary Sensor]: https://esphome.io/components/binary_sensor/status.html
 [Status LED]: https://esphome.io/components/status_led.html
+[Syslog]: https://esphome.io/components/syslog/
 [Time]: https://esphome.io/components/time.html
 [UART]: https://esphome.io/components/uart.html
 [Uptime Sensor]: https://esphome.io/components/sensor/uptime.html
