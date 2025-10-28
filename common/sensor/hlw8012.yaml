@@ -1,3 +1,5 @@
+---
+
 platform: hlw8012
 sel_pin:
   number: ${power_sel_pin}

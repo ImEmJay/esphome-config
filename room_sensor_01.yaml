@@ -1,5 +1,7 @@
 # Room Sensor
 
+---
+
 substitutions:
   device_id: !secret esp_room_sensor_01_device_id
   device_name: !secret esp_room_sensor_01_device_name

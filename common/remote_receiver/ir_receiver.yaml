@@ -1,3 +1,5 @@
+---
+
 id: ir_receiver
 pin:
   number: ${ir_receiver_pin}

@@ -1,3 +1,5 @@
+---
+
 platform: adc
 pin: ${illuminance_pin}
 name: "${device_name} Illuminance"

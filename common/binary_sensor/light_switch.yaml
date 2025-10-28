@@ -1,3 +1,5 @@
+---
+
 platform: gpio
 id: input
 pin:

@@ -1,3 +1,5 @@
+---
+
 platform: homeassistant
 id: homeassistant_ble_gateway_discovery
 entity_id: ${homeassistant_ble_gateway_discovery_entity_id} # Default binary_sensor.ble_gateway

@@ -1,5 +1,7 @@
 # Shelly 2.5 Power Monitoring Relay Light
 
+---
+
 substitutions:
   device_id: !secret esp_shelly_2_5_light_01_device_id
   device_name: !secret esp_shelly_2_5_light_01_device_name

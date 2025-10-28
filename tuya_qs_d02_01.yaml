@@ -2,6 +2,8 @@
 #
 # https://community.home-assistant.io/t/qs-wifi-d01-triac-dimmer/149811/9
 
+---
+
 substitutions:
   device_id: !secret esp_tuya_qs_d02_01_device_id
   device_name: !secret esp_tuya_qs_d02_01_device_name

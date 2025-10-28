@@ -1,3 +1,5 @@
+---
+
 platform: total_daily_energy
 name: "${device_name} Total Daily Energy"
 power_id: power_monitor_value

@@ -1,3 +1,5 @@
+---
+
 api:
   encryption:
     key: ${api_encryption_key}

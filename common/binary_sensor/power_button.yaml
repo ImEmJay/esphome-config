@@ -1,3 +1,5 @@
+---
+
 platform: gpio
 id: power_button
 pin:

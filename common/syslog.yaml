@@ -1,3 +1,5 @@
+---
+
 syslog:
   udp_id: syslog_udp
   time_id: sntp_time

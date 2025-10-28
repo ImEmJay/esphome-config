@@ -1,3 +1,5 @@
+---
+
 platform: neopixelbus
 name: "color_led"
 id: color_led

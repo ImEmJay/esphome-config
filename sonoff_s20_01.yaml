@@ -1,5 +1,7 @@
 # Sonoff S20 Plug
 
+---
+
 substitutions:
   device_id: !secret esp_sonoff_s20_01_device_id
   device_name: !secret esp_sonoff_s20_01_device_name

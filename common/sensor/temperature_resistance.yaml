@@ -1,3 +1,5 @@
+---
+
 platform: resistance
 id: temperature_resistance
 sensor: temperature_analog

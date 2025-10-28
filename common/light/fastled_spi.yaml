@@ -1,3 +1,5 @@
+---
+
 platform: fastled_spi
 name: "color_led"
 id: color_led

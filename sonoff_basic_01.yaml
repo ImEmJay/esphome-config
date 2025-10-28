@@ -1,5 +1,7 @@
 # Sonoff Basic Relay
 
+---
+
 substitutions:
   device_id: !secret esp_sonoff_basic_01_device_id
   device_name: !secret esp_sonoff_basic_01_device_name

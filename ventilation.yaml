@@ -2,6 +2,8 @@
 #
 # Sonoff TH10 Relay with Temperature/Humidity Sensor
 
+---
+
 substitutions:
   device_id: !secret esp_ventilation_device_id
   device_name: !secret esp_ventilation_device_name

@@ -1,3 +1,5 @@
+---
+
 platform: gpio
 id: restart_button
 pin:

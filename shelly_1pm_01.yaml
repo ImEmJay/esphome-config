@@ -1,5 +1,7 @@
 # Shelly 1 PM Power Monitoring Relay
 
+---
+
 substitutions:
   device_id: !secret esp_shelly_1pm_01_device_id
   device_name: !secret esp_shelly_1pm_01_device_name
