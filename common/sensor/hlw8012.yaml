@@ -3,7 +3,7 @@
 platform: hlw8012
 sel_pin:
   number: ${power_sel_pin}
-  inverted: True
+  inverted: true
 cf_pin: ${power_cf_pin}
 cf1_pin: ${power_cf1_pin}
 current:

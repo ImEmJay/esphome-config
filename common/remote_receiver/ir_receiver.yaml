@@ -3,4 +3,4 @@
 id: ir_receiver
 pin:
   number: ${ir_receiver_pin}
-  inverted: True
+  inverted: true
