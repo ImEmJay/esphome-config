@@ -13,5 +13,3 @@ default_transition_length: ${default_transition_length}
 gamma_correct: ${gamma_correct}
 restore_mode: ${restore_mode}
 <<: !include effects_adressable.yaml
-
-
