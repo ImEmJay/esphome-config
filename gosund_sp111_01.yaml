@@ -59,4 +59,3 @@ time:
 
 udp:
   - !include common/udp/syslog.yaml
-
