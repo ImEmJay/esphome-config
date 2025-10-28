@@ -13,7 +13,7 @@ The following features are implemented for every device
 - [Native API] connection for [Home Assistant]
 - [Web Server] based device control
 - [Time] synchronization with [Home Assistant]
-- [Syslog] output 
+- [Syslog] output
 - [Status Binary Sensor] (device status)
 - [Wifi Signal Sensor]
 - [Uptime Sensor]
