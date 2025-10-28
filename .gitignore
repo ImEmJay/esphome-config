@@ -1,4 +1,7 @@
-**/
-/secrets.yaml
-!common/
-!common/**
+.Trash*/
+.cache/
+.custom_components/
+.esphome/
+.history/
+.vscode/
+secrets.yaml
