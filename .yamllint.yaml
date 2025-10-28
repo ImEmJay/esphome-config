@@ -1,0 +1,10 @@
+---
+
+extends: default
+
+ignore-from-file: .gitignore
+locale: en_US.UTF-8
+
+rules:
+  truthy:
+    level: error
