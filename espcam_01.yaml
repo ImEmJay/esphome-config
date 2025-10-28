@@ -15,7 +15,7 @@ substitutions:
 
   status_led_pin: GPIO00 # Blue LED
 
-  camera_jpeg_quality: '10' # Default 10
+  camera_jpeg_quality: "10" # Default 10
   camera_max_framerate: 10 fps # Default 10 fps
   camera_resolution: 640x480 # Default 640x480
 

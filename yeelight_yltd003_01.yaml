@@ -22,12 +22,12 @@ substitutions:
   color_correct_r: 95%
   color_correct_g: 95%
   color_correct_b: 95%
-  constant_brightness: 'true'
-  cold_white_color_temperature: '6500 K' # Default '6500 K'
-  warm_white_color_temperature: '2700 K' # Default '2700 K'
+  constant_brightness: "true"
+  cold_white_color_temperature: "6500 K" # Default '6500 K'
+  warm_white_color_temperature: "2700 K" # Default '2700 K'
   default_transition_length: 1s # Default 1s
-  gamma_correct: '2.8' # Default 2.8
-  num_leds: '40'
+  gamma_correct: "2.8" # Default 2.8
+  num_leds: "40"
   restore_mode: RESTORE_DEFAULT_OFF
   rgb_order: GRB
 

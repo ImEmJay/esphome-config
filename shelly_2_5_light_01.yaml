@@ -23,7 +23,7 @@ substitutions:
   status_led_pin: GPIO00 # Red LED
   temperature_analog_pin: A0 # Temperature Analog Reading
 
-  ntc_b_constant: '3350'
+  ntc_b_constant: "3350"
   ntc_reference_resistance: 10kOhm
   ntc_reference_temperature: 298.15K
   temperature_resistance_resistor: 32kOhm

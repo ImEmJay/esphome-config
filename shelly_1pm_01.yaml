@@ -20,8 +20,8 @@ substitutions:
   relay_pin: GPIO15 # Relay
   status_led_pin: GPIO00 # Red LED
 
-  current_resistor: '0.001' # Powermeter Current Resistor
-  voltage_divider: '910' # Powermeter Voltage Devider
+  current_resistor: "0.001" # Powermeter Current Resistor
+  voltage_divider: "910" # Powermeter Voltage Devider
 
 esphome:
   name: ${device_id}
