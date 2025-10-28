@@ -18,11 +18,11 @@ substitutions:
   illuminance_pin: GPIO36 # ADC
   motion_pin: GPIO14
 
-  bme280_address: '0x76'
-  homeassistant_ble_gateway_devices_attribute: 'devices'
-  homeassistant_ble_gateway_devices_entity_id: 'binary_sensor.ble_gateway'
-  homeassistant_ble_gateway_discovery_attribute: 'discovery'
-  homeassistant_ble_gateway_discovery_entity_id: 'binary_sensor.ble_gateway'
+  bme280_address: "0x76"
+  homeassistant_ble_gateway_devices_attribute: "devices"
+  homeassistant_ble_gateway_devices_entity_id: "binary_sensor.ble_gateway"
+  homeassistant_ble_gateway_discovery_attribute: "discovery"
+  homeassistant_ble_gateway_discovery_entity_id: "binary_sensor.ble_gateway"
 
 external_components:
   - !include common/external_components/ble_gateway.yaml

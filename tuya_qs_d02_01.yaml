@@ -21,7 +21,7 @@ substitutions:
   uart_tx_pin: GPIO01
 
   default_transition_length: 1s # Default 1s
-  gamma_correct: '2.8' # Default 2.8
+  gamma_correct: "2.8" # Default 2.8
   restore_mode: RESTORE_DEFAULT_OFF
 
 esphome:
