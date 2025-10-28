@@ -90,7 +90,16 @@ sensor:
     on_value:
       then:
         - uart.write: !lambda |-
-            return {0xFF, 0x55, 0x01, (char) id(brightness1).state,0x00, 0x00, 0x00, 0x0A};
+            return {
+              0xFF,
+              0x55,
+              0x01,
+              (char) id(brightness1).state,
+              0x00,
+              0x00,
+              0x00,
+              0x0A
+            };
   - platform: template
     id: brightness2
     internal: true
@@ -107,7 +116,16 @@ sensor:
     on_value:
       then:
         - uart.write: !lambda |-
-            return {0xFF, 0x55, 0x02, 0x00, (char) id(brightness2).state, 0x00, 0x00, 0x0A};
+            return {
+              0xFF,
+              0x55,
+              0x02,
+              0x00,
+              (char) id(brightness2).state,
+              0x00,
+              0x00,
+              0x0A
+            };
 
 text_sensor:
   - !include common/text_sensor/light_id.yaml

@@ -11,5 +11,6 @@ lambda: |-
   strcat( response, WiFi.macAddress().c_str());
   strcat( response, ";");
   strcat( response, App.get_name().c_str());
-  strcat( response, ";0;0" ); // ;CT_BOOST;RGB_BOOST values go here; Replace with 0 to disable
+  // ;CT_BOOST;RGB_BOOST values go here; Replace with 0 to disable
+  strcat( response, ";0;0" );
   return { response };
