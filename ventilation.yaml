@@ -17,13 +17,13 @@ substitutions:
   wifi_password: !secret wifi_password
   wifi_power_save_mode: NONE
 
-  button_pin: GPIO00 # Power Button
+  button_pin: GPIO00  # Power Button
   dht_pin: GPIO14
-  status_led_pin: GPIO13 # Green LED
-  relay_pin: GPIO12 # Relay
+  status_led_pin: GPIO13  # Green LED
+  relay_pin: GPIO12  # Relay
 
-  dht_model: SI7021 # Default AUTO_DETECT
-  dht_update_interval: 20s # Default 60s
+  dht_model: SI7021  # Default AUTO_DETECT
+  dht_update_interval: 20s  # Default 60s
   humidity_treshold_off: "75.0"
   humidity_treshold_on: "80.0"
 
