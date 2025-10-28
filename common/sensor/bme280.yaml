@@ -1,3 +1,5 @@
+---
+
 platform: bme280_i2c
 temperature:
   name: "${device_name} Temperature"

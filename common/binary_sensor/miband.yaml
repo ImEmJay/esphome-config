@@ -1,3 +1,5 @@
+---
+
 platform: ble_presence
 mac_address: ${miband_mac_address}
 id: mibandpresence

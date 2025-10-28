@@ -1,2 +1,4 @@
+---
+
 platform: status
 name: "${device_name} Status"

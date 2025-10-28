@@ -1,3 +1,5 @@
+---
+
 platform: template
 id: ble_gateway_discovery
 name: "${device_name} BLE Gateway Discovery"

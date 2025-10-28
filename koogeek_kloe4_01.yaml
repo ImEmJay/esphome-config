@@ -1,5 +1,7 @@
 # Koogeek KLOE4 Power Strip
 
+---
+
 substitutions:
   device_id: !secret esp_koogeek_kloe4_01_device_id
   device_name: !secret esp_koogeek_kloe4_01_device_name

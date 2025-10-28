@@ -1,3 +1,5 @@
+---
+
 platform: binary
 name: "${device_name} Light"
 output: ${binary_light_output}

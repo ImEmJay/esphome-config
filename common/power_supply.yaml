@@ -1,3 +1,5 @@
+---
+
 power_supply:
   - id: power
     pin: ${power_supply_pin}

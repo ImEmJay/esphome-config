@@ -1,3 +1,5 @@
+---
+
 platform: restart
 name: ${device_name} Restart
 id: reboot

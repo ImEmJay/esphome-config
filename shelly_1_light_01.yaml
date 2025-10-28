@@ -1,5 +1,7 @@
 # Shelly 1 Relay Light
 
+---
+
 substitutions:
   device_id: !secret esp_shelly_1_light_01_device_id
   device_name: !secret esp_shelly_1_light_01_device_name

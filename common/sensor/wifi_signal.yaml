@@ -1,3 +1,5 @@
+---
+
 platform: wifi_signal
 name: "${device_name} Wifi Signal"
 update_interval: 60s

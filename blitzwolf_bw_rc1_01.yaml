@@ -1,5 +1,7 @@
 # Blitzwolf BW-RC1 IR Controller
 
+---
+
 substitutions:
   device_id: !secret esp_blitzwolf_bw_rc1_01_device_id
   device_name: !secret esp_blitzwolf_bw_rc1_01_device_name

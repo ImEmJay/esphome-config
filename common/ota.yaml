@@ -1,3 +1,5 @@
+---
+
 ota:
   - platform: esphome
     password: ${ota_password}

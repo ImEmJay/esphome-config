@@ -1,5 +1,7 @@
 # DIY Hue Light (adressable)
 
+---
+
 substitutions:
   device_id: !secret esp_yeelight_yltd003_01_device_id
   device_name: !secret esp_yeelight_yltd003_01_device_name

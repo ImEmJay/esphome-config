@@ -1,3 +1,5 @@
+---
+
 platform: homeassistant
 id: homeassistant_ble_gateway_devices
 entity_id: ${homeassistant_ble_gateway_devices_entity_id} #binary_sensor.ble_gateway

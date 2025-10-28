@@ -1,3 +1,5 @@
+---
+
 platform: ntc
 sensor: temperature_resistance
 name: "${device_name} Temperature"
