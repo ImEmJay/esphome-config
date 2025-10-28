@@ -2,8 +2,10 @@
 
 platform: homeassistant
 id: homeassistant_ble_gateway_devices
-entity_id: ${homeassistant_ble_gateway_devices_entity_id} #binary_sensor.ble_gateway
-attribute: ${homeassistant_ble_gateway_devices_attribute} #devices
+# Default binary_sensor.ble_gateway
+entity_id: ${homeassistant_ble_gateway_devices_entity_id}
+# Default devices
+attribute: ${homeassistant_ble_gateway_devices_attribute}
 on_value:
   then:
     lambda: id(blegateway).set_devices(x);
