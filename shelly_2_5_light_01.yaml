@@ -8,6 +8,8 @@ substitutions:
 
   api_encryption_key: !secret esp_api_encryption_key
   ota_password: !secret esp_ota_password
+  sntp_time_timezone: !secret sntp_time_timezone
+  sntp_time_servers: !secret sntp_time_servers
   syslog_port: !secret syslog_port
   syslog_udp_addresses: !secret syslog_udp_addresses
   wifi_domain: !secret wifi_domain
