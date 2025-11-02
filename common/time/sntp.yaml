@@ -2,3 +2,5 @@
 
 platform: sntp
 id: sntp_time
+timezone: ${sntp_time_timezone}
+servers: ${sntp_time_servers}
